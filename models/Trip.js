@@ -11,7 +11,7 @@ Trip.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        description: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -29,7 +29,7 @@ Trip.init(
                 key: 'id',
             },
         },
-        waypoint_id: {
+        location_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'location',

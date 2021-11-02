@@ -24,14 +24,7 @@ Journal.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        destination_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'location',
-                key: 'id',
-            },
-        },
-        way_point_id: {
+        trip_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'trip',

@@ -20,6 +20,10 @@ Trip.hasMany(Location, {
     foreignKey: "trip_id",
 })
 
+Trip.hasMany(Journal, {
+    foreignKey: "trip_id",
+})
+
 Trip.belongsTo(User, {
     foreignKey: "user_id",
 });
@@ -28,8 +32,16 @@ Packlist.belongsTo(User, {
     foreignKey: "user_id",
 });
 
+Packlist.belongsTo(Trip, {
+    foreignKey: "trip_id",
+});
+
 Journal.belongsTo(User, {
     foreignKey: "user_id",
+});
+
+Journal.belongsTo(Trip, {
+    foreignKey: "trip_id",
 });
 
 Location.belongsTo(Trip, {
