@@ -50,6 +50,10 @@ Location.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    transit_details: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     start_date: {
       type: DataTypes.DATE,
       allowNull: false,
