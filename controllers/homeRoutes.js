@@ -71,7 +71,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 })
 
-//route to sign uo for an account
+//route to sign up for an account
 router.get('/signup', (req, res) => {
     res.render('signup');
 })
