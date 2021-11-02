@@ -29,20 +29,13 @@ Trip.init(
                 key: 'id',
             },
         },
-        way_point_id: {
+        waypoint_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'location',
                 key: 'id',
             },
         },
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'user',
-                key: 'id',
-            },
-        }
     },
     {
         sequelize,

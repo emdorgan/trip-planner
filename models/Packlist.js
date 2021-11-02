@@ -11,6 +11,17 @@ Packlist.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        trip_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'trip',
+                key: 'id',
+            },
+        },
+        items: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -18,17 +29,6 @@ Packlist.init(
                 key: 'id',
             },
         },
-        destination_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'location',
-                key: 'id',
-            },
-        },
-        items: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        }
     },
     {
         sequelize,

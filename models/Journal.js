@@ -34,7 +34,7 @@ Journal.init(
         way_point_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'location',
+                model: 'trip',
                 key: 'id',
             },
         },
