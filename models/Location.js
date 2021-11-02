@@ -54,9 +54,13 @@ Location.init(
             allowNull: false,
         },
         start_date: {
+            type: DataTypes.DATE,
+            allowNull: false,
             //add
         },
         duration: {
+            type: DataTypes.DATE,
+            allowNull: false,
             //add
         },
         location_activities: {
