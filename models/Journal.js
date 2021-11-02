@@ -37,6 +37,13 @@ Journal.init(
                 model: 'location',
                 key: 'id',
             },
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
         }
     },
     {
