@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Journal extends Model { }
+class Trip extends Model { }
 
-Journal.init(
+Trip.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,41 +11,39 @@ Journal.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        title: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        date_created: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-        },
-        content: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        trip_id: {
+        start_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'trip',
+                model: 'location',
                 key: 'id',
             },
         },
-        user_id: {
+        destination_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
+                model: 'location',
                 key: 'id',
             },
-        }
+        },
+        location_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'location',
+                key: 'id',
+            },
+        },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'journal',
+        modelName: 'trip',
     }
 );
 
-module.exports = Journal;
+module.exports = Trip;
