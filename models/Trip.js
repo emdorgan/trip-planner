@@ -18,14 +18,14 @@ Trip.init(
         destination_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'locations',
+                model: 'location',
                 key: 'id',
             },
         },
         start_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'locations',
+                model: 'location',
                 key: 'id',
             },
         },
