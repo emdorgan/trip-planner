@@ -15,13 +15,6 @@ Trip.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        destination_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'location',
-                key: 'id',
-            },
-        },
         start_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -29,6 +22,20 @@ Trip.init(
                 key: 'id',
             },
         },
+        destination_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'location',
+                key: 'id',
+            },
+        },
+        way_point_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'location',
+                key: 'id',
+            },
+        }
     },
     {
         sequelize,
