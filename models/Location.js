@@ -4,7 +4,7 @@ const sequelize = require("../config/connection");
 class Location extends Model { }
 
 
-Sequence
+//Sequence
 
 Location.init(
     {
