@@ -23,3 +23,24 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+//route to display one trip when clicked on
+router.get('/trip/:id', async (req, res) => {
+    try {
+        const tripData = await Trip.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['name'],
+                },
+            ],
+        });
+        const trip = tripData.get({ plain: true });
+        res.render('trip', {
+            trip,
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
