@@ -75,7 +75,11 @@ Location.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       unique: true,
-    }
+    },
+    contact: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
   },
   {
     sequelize,
