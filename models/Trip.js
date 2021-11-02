@@ -22,19 +22,22 @@ Trip.init(
                 key: 'id',
             },
         },
-        destination_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'location',
-                key: 'id',
-            },
-        },
         location_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'location',
                 key: 'id',
             },
+        },
+        start_date: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            //add
+        },
+        end_date: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            //add
         },
     },
     {
