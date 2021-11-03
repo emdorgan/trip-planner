@@ -31,6 +31,7 @@ router.get('/', withAuth, async (req, res) => {
             include: [{ model: Trip }]
         })
         const user = userData.get({ plain: true });
+        console.log(user);
         res.render('dashboard', {
             ...user,
             logged_in: true
