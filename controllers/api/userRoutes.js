@@ -5,7 +5,7 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
     try {
         const userData = await User.create(req.body);
-
+        console.log(userData);
         // set up a session to store the user information 
         req.session.save(() => {
             req.session.user_id = userData.id;
@@ -22,8 +22,8 @@ router.post('/', async (req, res) => {
 // route for user sign in
 router.post('/login', async (req, res) => {
     try {
+        console.log(req.body)
         const userData = await User.findOne({ where: { email: req.body.email } });
-
         if (!userData) {
             res
                 .status(400)
@@ -39,12 +39,11 @@ router.post('/login', async (req, res) => {
                 .json({ message: 'Incorrect email or password. Try again.' });
             return;
         }
-
+        console.log(userData);
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.email = userData.email;
             req.session.logged_in = true;
-
             res.json({ user: userData, message: 'You have been logged in successfully!' });
         });
 
