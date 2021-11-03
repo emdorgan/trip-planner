@@ -20,7 +20,8 @@ router.put('/:id', withAuth, async (req, res) => {
     try {
         const journalData = await Journal.update(req.body,
             {
-                where: { id: req.params.id }
+                where: {
+                    id: req.params.id }
             })
         if (!journalData) {
             res.status(404).json({ message: 'Could not find a journal entry with that id' })
