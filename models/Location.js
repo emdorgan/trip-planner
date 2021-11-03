@@ -18,33 +18,6 @@ Location.init(
     location_address: {
       type: DataTypes.STRING,
       allowNull: false,
-      /*
-                  name: Sequelize.STRING,
-                  address: Sequelize.STRING,
-                  latitude: {
-                    type: DataTypes.INTEGER,
-                    validate: {
-                      min: -90,
-                      max: 90
-                    }
-                  },
-                  longitude: {
-                    type: DataTypes.INTEGER,
-                    validate: {
-                      min: -180,
-                      max: 180
-                    }
-                  },
-                }, {
-                  sequelize,
-                  validate: {
-                    bothCoordsOrNone() {
-                      if ((this.latitude === null) !== (this.longitude === null)) {
-                        throw new Error('Either both latitude and longitude, or neither!');
-                      }
-                    }
-                  }
-                })*/
     },
     vehicle: {
       type: DataTypes.STRING,
@@ -55,14 +28,12 @@ Location.init(
       allowNull: true,
     },
     start_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
-      //add
     },
     end_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
-      //add
     },
     location_activities: {
       type: DataTypes.STRING,
@@ -78,7 +49,6 @@ Location.init(
     sequence: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      unique: true,
     },
     contact: {
       type: DataTypes.STRING,

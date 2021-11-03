@@ -1,90 +1,75 @@
 [
     {
-        "id": 1,
         "items": "black skirt, white tank, sandals",
         "user_id": 1,
         "trip_id": 1
     },
     {
-        "id": 2,
         "items": "jeans, gray t-shirt, sneakers, socks",
         "user_id": 1,
         "trip_id": 1
     },
     {
-        "id": 3,
         "items": "purple shorts, black shirt, black shoes",
         "user_id": 1,
         "trip_id": 1
     },
     {
-        "id": 4,
         "items": "black pants, pink top, gray shoes",
         "user_id": 1,
         "trip_id": 2
     },
     {
-        "id": 5,
         "items": "gray pants, green t-shirt, sneakers, socks",
         "user_id": 1,
         "trip_id": 2
     },
     {
-        "id": 6,
         "items": "denim shorts, red top, white shoes",
         "user_id": 1,
         "trip_id": 2
     },
     {
-        "id": 7,
         "items": "black dress, red heels",
         "user_id": 1,
         "trip_id": 3
     },
     {
-        "id": 8,
         "items": "leggings, blue t-shirt, sneakers, socks",
         "user_id": 1,
         "trip_id": 3
     },
     {
-        "id": 9,
         "items": "yoga pants, green tank top, flip flops",
         "user_id": 1,
         "trip_id": 3
     },
     {
-        "id": 10,
         "items": "jeans, Nats t-shirt, black sneakers",
         "user_id": 2,
         "trip_id": 1
     },
     {
-        "id": 11,
         "items": "gray shorts, white polo, Yeezys",
         "user_id": 2,
         "trip_id": 2
     },
     {
-        "id": 12,
         "items": "blue suit, red tie, tan leather boots",
         "user_id": 3,
         "trip_id": 1
     },
     {
-        "id": 13,
         "items": "black pants, white button up, brown boots",
         "user_id": 3,
         "trip_id": 1
     },
     {
-        "id": 14,
         "items": "jeans, gray shirt, white shoes",
         "user_id": 3,
         "trip_id": 2
     },
     {
-        "id": 15,
         "items": "sweatpants, white t-shirt, slippers",
         "user_id": 3,
         "trip_id": 2

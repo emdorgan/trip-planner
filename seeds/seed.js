@@ -16,25 +16,13 @@ const seedDatabase = async () => {
       returning: true,
     });
 
-    const trips = await User.bulkCreate(tripData, {
-      individualHooks: true,
-      returning: true,
-    });
+    const trips = await Trip.bulkCreate(tripData);
 
-    const locations = await User.bulkCreate(locationData, {
-      individualHooks: true,
-      returning: true,
-    });
+    const locations = await Location.bulkCreate(locationData);
 
-    const journals = await User.bulkCreate(journalData, {
-      individualHooks: true,
-      returning: true,
-    });
+    const journals = await Journal.bulkCreate(journalData);
 
-    const packlists = await User.bulkCreate(packlistData, {
-      individualHooks: true,
-      returning: true,
-    });
+    const packlists = await Packlist.bulkCreate(packlistData);
     
 process.exit(0);
 };

@@ -13,7 +13,7 @@ router.get('/trip/:id', async (req, res) => {
             ],
         });
         const trip = tripData.get({ plain: true });
-        res.render('trip', {
+        res.render('mytrip', {
             trip,
             logged_in: req.session.logged_in
         });
