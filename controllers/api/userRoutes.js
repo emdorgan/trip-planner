@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
         // set up a session to store the user information 
         req.session.save(() => {
             req.session.user_id = userData.id;
-            req.session.name = userData.name;
+            req.session.email = userData.email;
             req.session.logged_in = true;
 
             res.status(200).json(userData);

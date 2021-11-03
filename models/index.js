@@ -18,11 +18,15 @@ User.hasMany(Journal, {
 
 Trip.hasMany(Location, {
     foreignKey: "trip_id",
-})
+});
 
 Trip.hasMany(Journal, {
     foreignKey: "trip_id",
-})
+});
+
+Trip.hasMany(Packlist, {
+    foreignKey: "trip_id",
+});
 
 Trip.belongsTo(User, {
     foreignKey: "user_id",
