@@ -7,6 +7,9 @@
         "transit_details": "Start driving at 9am",
         "start_date": "28 Nov 2021",
         "end_date": "31 Nov 2021",
-        
+        "location_activities": "Cook and hang out with g-ma",
+        "trip_id": 1,
+        "sequence": 1,
+        "contacts": "Grandma's number: 5102222222 "
     }
 ]
