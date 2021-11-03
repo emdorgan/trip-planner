@@ -25,7 +25,6 @@ router.get('/trip/:id', async (req, res) => {
 // homepage for authenticated user is the dashboard
 router.get('/', withAuth, async (req, res) => {
     try {
-        console.log('does this work');
         const userData = await User.findByPk(req.session.user_id, {
             attributes: {exclude: ['password'] },
             include: [{ model: Trip }]
