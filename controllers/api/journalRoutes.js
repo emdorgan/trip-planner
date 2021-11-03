@@ -27,7 +27,7 @@ router.put('/:id', withAuth, async (req, res) => {
             res.status(404).json({ message: 'Could not find a journal entry with that id' })
         }
 
-        res.status(200).json(locationData);
+        res.status(200).json(journalData);
     } catch (err) {
         res.status(400).json(err);
     }
