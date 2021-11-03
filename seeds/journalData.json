@@ -6,5 +6,50 @@
         "content": "Going to visit grandma", 
         "trip_id": 1,
         "user_id": 1
+    },
+
+    {
+        "id": 2, 
+        "title": "Day 10",
+        "data_created": "8 Dec 2021",
+        "content": "Meeting grandma's siblings for the first time", 
+        "trip_id": 1,
+        "user_id": 1
+    },
+
+    {
+        "id": 3, 
+        "title": "Day 1",
+        "data_created": "8 May 2022",
+        "content": "CANCUN BABY!", 
+        "trip_id": 2,
+        "user_id": 1
+    },
+
+    {
+        "id": 4, 
+        "title": "Day 7",
+        "data_created": "14 May 2022",
+        "content": "im too tired lets go home", 
+        "trip_id": 2,
+        "user_id": 1
+    }, 
+
+    {
+        "id": 5, 
+        "title": "Day 1",
+        "data_created": "14 June 2022",
+        "content": "lets go to france", 
+        "trip_id": 1,
+        "user_id": 2
+    },
+
+    {
+        "id": 6, 
+        "title": "Day 2",
+        "data_created": "15 June 2022",
+        "content": "flight got delayed, i am now stuck in denver", 
+        "trip_id": 1,
+        "user_id": 2
     }
 ]

@@ -10,6 +10,19 @@
         "location_activities": "Cook and hang out with g-ma",
         "trip_id": 1,
         "sequence": 1,
-        "contacts": "Grandma's number: 5102222222 "
+        "contacts": "Grandma's number: 5102222222"
+    },
+    {
+        "id": 2,
+        "location_name": "Vietnam",
+        "location_address": "Hanoi, Vietnam",
+        "vehicles": "plan",
+        "transit_details": "flight is at 10pm",
+        "start_date": "1 Dec 2021",
+        "end_date": "9 Dec 2021",
+        "location_activities": "visit grandma's siblings",
+        "trip_id": 1,
+        "sequence": 2,
+        "contacts": "Grandma's sisters number: +123204123345"
     }
 ]
