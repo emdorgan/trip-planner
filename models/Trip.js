@@ -15,20 +15,6 @@ Trip.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        start_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'location',
-                key: 'id',
-            },
-        },
-        location_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'location',
-                key: 'id',
-            },
-        },
         start_date: {
             type: DataTypes.DATE,
             allowNull: false,
