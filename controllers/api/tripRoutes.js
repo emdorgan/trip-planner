@@ -3,7 +3,7 @@ const withAuth = require('../../utils/auth');
 const { Trip } = require('../../models');
 
 // add new trip
-router.trip('/', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         const newTrip = await Trip.create({
             ...req.body,
