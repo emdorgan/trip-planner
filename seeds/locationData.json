@@ -16,7 +16,7 @@
         "id": 2,
         "location_name": "Vietnam",
         "location_address": "Hanoi, Vietnam",
-        "vehicles": "plan",
+        "vehicles": "plane",
         "transit_details": "flight is at 10pm",
         "start_date": "1 Dec 2021",
         "end_date": "9 Dec 2021",
@@ -24,5 +24,32 @@
         "trip_id": 1,
         "sequence": 2,
         "contacts": "Grandma's sisters number: +123204123345"
+    },
+    {
+        "id": 3,
+        "location_name": "Cancun",
+        "location_address": "Cancun",
+        "vehicles": "cruise",
+        "transit_details": "check-in time is between 10-2pm",
+        "start_date": "8 May 2022",
+        "end_date": "15 May 2022",
+        "location_activities": "orientation for the cruise",
+        "trip_id": 2,
+        "sequence": 1,
+        "contacts": "501341234"
+    },
+    {
+
+        "id": 4,
+        "location_name": "France",
+        "location_address": "Paris, France",
+        "vehicles": "plan",
+        "transit_details": "flight at 9am",
+        "start_date": "14 June 2022",
+        "end_date": "28 June 2022",
+        "location_activities": "visiting friends",
+        "trip_id": 3,
+        "sequence": 1,
+        "contacts": "1231231442"
     }
 ]

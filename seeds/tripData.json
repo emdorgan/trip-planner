@@ -4,5 +4,17 @@
         "name": "Visiting Family",
         "start_date": "28 Nov 2021",
         "end_date": "28 Dec 2021"
+    },
+    {
+        "id": 2,
+        "name": "Cancun with the boys",
+        "start_date": "8 May 2022",
+        "end_date": "15 May 2022"
+    },
+    {
+        "id": 3,
+        "name": "Visiting Friends in France",
+        "start_date": "14 June 2022",
+        "end_date": "28 June 2022"
     }
 ]
