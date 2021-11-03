@@ -25,6 +25,13 @@ Trip.init(
             allowNull: false,
             //add
         },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
+        },
     },
     {
         sequelize,
