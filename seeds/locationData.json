@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "location_name": "Grandma's House",
+        "location_address": "1112 Example St, Ca 95607",
+        "vehicles": "car",
+        "transit_details": "Start driving at 9am",
+        "start_date": "28 Nov 2021",
+        "end_date": "31 Nov 2021",
+        
+    }
+]
