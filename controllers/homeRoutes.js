@@ -78,7 +78,7 @@ router.get('/trip/:id/journal/', withAuth, async (req, res) => {
         const journal = journalData.get({ plain: true });
         console.log(journal);
         res.render('journal', {
-            journal,
+            ...journal,
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -100,7 +100,7 @@ router.get('/trip/:id/packlist/' , withAuth, async (req, res) => {
         const packlist = packlistData.get({ plain: true });
         console.log(packlist);
         res.render('packlist', {
-            packlist,
+            ...packlist,
             logged_in: req.session.logged_in
         });
     } catch (err) {
