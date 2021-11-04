@@ -1,8 +1,16 @@
 {{!-- User clicks on packlist for a specific trip --}}
 <h2>My Packing List for {{name}}</h2>
+<a href="/trip/{{id}}/journal">
+    <button type="button" class="btn btn-info" id="journal">Journal</button>
+</a>
 <form>
 {{#each packlists as |packlist|}}
     <input type="checkbox" name="{{packlist.itmes}}" >
     <label for="{{packlist.items}}"> {{packlist.items}} </label><br>
 {{/each}}
 </form>
+
+<a href="/trip/{{id}}">
+    <button type="button" class="btn btn-info">Back to {{name}}</button>
+</a>
+<button type="button" class="btn btn-success">Add Item</button>

@@ -13,7 +13,7 @@
     <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
         {{location.location_name}}
     </a>
-    <a class="col">
+    <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
         {{location.location_address}}
     </a>
     <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
@@ -36,3 +36,7 @@
     </div>
 </div>
 {{/each}}
+<a href="/">
+    <button type="button" class="btn btn-info">Back to My Trips</button>
+</a>
+<button type="button" class="btn btn-success">Add destination</button>
