@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Image extends Model { }
+class Image extends Model {}
 
 Image.init(
     {
@@ -10,6 +10,9 @@ Image.init(
         allowNull: false,
         primaryKey: true,
         autoIncrement: true,
+    },
+    file_name: {
+        type: DataTypes.STRING,
     },
     user_id: {
         type: DataTypes.INTEGER,
@@ -29,4 +32,4 @@ Image.init(
     }
 )
 
-modulel.export = Image;
+module.exports = Image;
