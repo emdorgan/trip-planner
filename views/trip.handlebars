@@ -1,4 +1,10 @@
-<h2>{{name}}</h2>
+<h2>{{name}}</h2> 
+<a href="/trip/{{id}}/packlist">
+    <button type="button" class="btn btn-info" id="pack-list">Packing List</button>
+</a>
+<a href="/trip/{{id}}/journal">
+<button type="button" class="btn btn-info" id="journal">Journal</button>
+</a>
 {{#each locations as |location|}}
 <div class="row">
     <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col-md-1">
