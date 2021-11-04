@@ -11,8 +11,9 @@ Image.init(
         primaryKey: true,
         autoIncrement: true,
     },
-    file_name: {
+    path_name: {
         type: DataTypes.STRING,
+        allowNull: false,
     },
     user_id: {
         type: DataTypes.INTEGER,
