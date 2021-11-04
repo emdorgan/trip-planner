@@ -1,5 +1,5 @@
 const btnHandler = async (event) => {
-    if(event.target.hasAttribute('data-id')) {
+    if(event.target.hasAttribute('data-id')){
         if(event.target.getAttribute('id') === 'delete'){
             const id = event.target.getAttribute('data-id');
             const response = await fetch(`/api/trips/${id}`, {
@@ -13,7 +13,7 @@ const btnHandler = async (event) => {
             } 
         }
     }
-}
+};
 
 // when submit is clicked, selects the various fields the user entered and saves to the database with an API call
 const addNewTrip = async (event) =>{

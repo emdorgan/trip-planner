@@ -6,26 +6,32 @@ const Journal = require("./Journal");
 
 User.hasMany(Trip, {
     foreignKey: "user_id",
+    onDelete: 'CASCADE'
 });
 
 User.hasMany(Packlist, {
     foreignKey: "user_id",
+    onDelete: 'CASCADE'
 });
 
 User.hasMany(Journal, {
     foreignKey: "user_id",
+    onDelete: 'CASCADE'
 });
 
 Trip.hasMany(Location, {
     foreignKey: "trip_id",
+    onDelete: 'CASCADE'
 });
 
 Trip.hasMany(Journal, {
     foreignKey: "trip_id",
+    onDelete: 'CASCADE'
 });
 
 Trip.hasMany(Packlist, {
     foreignKey: "trip_id",
+    onDelete: 'CASCADE'
 });
 
 Trip.belongsTo(User, {
