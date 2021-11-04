@@ -6,19 +6,19 @@
 </div>
 {{#each trips as |trip|}}
 <div class="row">
-  <div class="col">
+  <a href="/trip/{{trip.id}}/locations" class="col">
     <h3>
       {{trip.name}}
     </h3>
-  </div>
-  <div class="col">
+  </a>
+  <a href="/trip/{{trip.id}}/locations" class="col">
     <p>
       Start Date: {{trip.start_date}}
     </p>
     <p>
       End Date: {{trip.end_date}}
     </p>
-  </div>
+  </a>
   <div class="col">
     <a href="/trip/{{trip.id}}/packlist">
       <button type="button" class="btn btn-info" data-id="{{trip.id}}" id="pack-list">Packing List</button>

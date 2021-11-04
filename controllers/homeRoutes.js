@@ -3,7 +3,7 @@ const withAuth = require('../utils/auth');
 const { User, Trip, Location, Journal, Packlist } = require('../models');
 
 //route to display one trip when clicked on
-router.get('/trip/:id', async (req, res) => {
+router.get('/trip/:id', withAuth, async (req, res) => {
     try {
         const tripData = await Trip.findByPk(req.params.id, {
             include: [
@@ -43,24 +43,18 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 //route to location; rendering information to mylocation handlebars
-router.get('/trip/:id/location/' , async (req, res) => {
+router.get('/trip/:id/locations/', withAuth, async (req, res) => {
     try {
-        const locationData = await Location.findAll({
-            // this needs to be tested
-            where: {
-            trip_id: req.params.id,
-            user_id: req.session.id 
-        }
-          }, {
+        const locationData = await Trip.findByPk(req.params.id, {
             include: [
                 {
-                    model: Trip,
+                    model: Location,
                 },
             ],
         });
         console.log(locationData);
         const location = locationData.get({ plain: true });
-        res.render('mylocation', {
+        res.render('locations', {
             location,
             logged_in: req.session.logged_in
         });
@@ -70,7 +64,7 @@ router.get('/trip/:id/location/' , async (req, res) => {
 });
 
 //route to Journal , rendering information to journal handlebars
-router.get('/trip/:id/journal/' , async (req, res) => {
+router.get('/trip/:id/journal/', withAuth, async (req, res) => {
     try {
         const journalData = await Trip.findByPk(req.params.id, {
             include: [
@@ -91,7 +85,7 @@ router.get('/trip/:id/journal/' , async (req, res) => {
 });
 
 //route to Packlist , rendering information to packlist handlebars
-router.get('/trip/:id/packlist/' , async (req, res) => {
+router.get('/trip/:id/packlist/' , withAuth, async (req, res) => {
     try {
         const packlistData = await Trip.findByPk(req.params.id, {
             include: [
