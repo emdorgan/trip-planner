@@ -30,14 +30,14 @@
     {
         "title": "Day 1",
         "content": "lets go to france", 
-        "trip_id": 1,
+        "trip_id": 3,
         "user_id": 2
     },
 
     {
         "title": "Day 2",
         "content": "flight got delayed, i am now stuck in denver", 
-        "trip_id": 1,
+        "trip_id": 3,
         "user_id": 2
     }
 ]

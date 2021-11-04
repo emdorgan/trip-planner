@@ -1,2 +1,9 @@
 {{!-- user clicks on a trip's journal --}}
-<h2>My journal for</h2>
+<h2>My journal for {{name}} </h2>
+{{#each journals as |journal|}}
+<div class = "row">
+    <div class = "col">
+        {{journal.title}} : {{journal.content}}
+    </div>
+</div>
+{{/each}}
