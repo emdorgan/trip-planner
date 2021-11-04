@@ -15,6 +15,7 @@ router.post('/', withAuth, upload.single('image'), async (req, res) => {
     } catch (err) {
         res.status(400).json(err);
     }
+
 });
 
 module.exports = router;

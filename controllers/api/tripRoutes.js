@@ -7,7 +7,7 @@ const { Trip } = require('../../models');
 // add new trip
 router.post('/', withAuth, async (req, res) => {
     try {
-        console.log(req.body.tripName);
+        
         const newTrip = await Trip.create({
             ...req.body,
             user_id: req.session.user_id,
