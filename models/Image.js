@@ -11,6 +11,10 @@ Image.init(
         primaryKey: true,
         autoIncrement: true,
     },
+    file_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     user_id: {
         type: DataTypes.INTEGER,
         references: {

@@ -42,9 +42,9 @@
 <a href="/">
     <button type="button" class="btn btn-info">Back to My Trips</button>
 </a>
-<button type="button" class="btn btn-success">Add New Location</button>
+<button type="button" id="reveal-new-location" class="btn btn-success">Add New Location</button>
 
-<form class="comment-form" id="new-location">
+<form class="hidden" id="new-location">
     <div class="form-group">
         <label for="location-name">Location Name:</label>
         <input type="text" class="form-control" id="location-name" placeholder="Enter Location">
@@ -67,15 +67,12 @@
     </div>
 
     <div class="form-group">
-        <label for="start-date">Start Date:</label>
-        <input type="text" class="form-control" id="start-date"
-            placeholder="Enter the day/time you will arrive at this location.">
+        <label for="datepicker">Start date: </label>
+        <input type="date" id="start-date">
     </div>
-
     <div class="form-group">
-        <label for="end-date">End Date:</label>
-        <input type="text" class="form-control" id="end-date"
-            placeholder="Enter the day/time you will depart this location.">
+        <label for="datepicker">End date: </label>
+        <input type="date" id="end-date">
     </div>
 
     <div class="form-group">
@@ -86,7 +83,6 @@
 
     <button type="submit" class="btn btn-primary add-location" data-id="{{id}}" id="submit-entry">Submit</button>
 </form>
-
 
 <script src="/js/trip.js"></script>
 <script src="/js/location.js"></script>

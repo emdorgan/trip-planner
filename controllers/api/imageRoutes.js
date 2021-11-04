@@ -4,9 +4,8 @@ const upload = require('../../utils/upload');
 const { Image } = require('../../models');
 
 // route to post 
-router.post('/upload', withAuth, upload.single('image'), (req, res) => {
-    console.log(req.body);
-    res.render("album");
+router.post('/upload', withAuth, upload.single('image'), async (req, res) => {
+    console.log(req.file);
 });
 
 module.exports = router;
