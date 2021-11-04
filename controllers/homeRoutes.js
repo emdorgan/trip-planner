@@ -118,9 +118,25 @@ router.get('/login', (req, res) => {
 })
 
 // route to get the images to album
-router.get('/upload', withAuth, (req, res) => {
-    res.render("album");
+router.get('/album', withAuth, async (req, res) => {
+    console.log(req);
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+
+            attributes: {exclude: ['password'] },
+            include: [{ model: Image }]
+        })
+        const user = userData.get({ plain: true });
+        console.log(user);
+        res.render('album', {
+            file_name: req.file.file_name,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
+
 
 
 
