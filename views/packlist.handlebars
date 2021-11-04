@@ -4,13 +4,25 @@
     <button type="button" class="btn btn-info" id="journal">Journal</button>
 </a>
 <form>
-{{#each packlists as |packlist|}}
-    <input type="checkbox" name="{{packlist.itmes}}" >
+    {{#each packlists as |packlist|}}
+    <input type="checkbox" name="{{packlist.itmes}}">
     <label for="{{packlist.items}}"> {{packlist.items}} </label><br>
-{{/each}}
+    {{/each}}
 </form>
 
 <a href="/trip/{{id}}">
     <button type="button" class="btn btn-info">Back to {{name}}</button>
 </a>
-<button type="button" class="btn btn-success">Add Item</button>
+
+<button type="button" class="btn btn-success" id="reveal-new-list">Add To Your List</button>
+
+<form class="comment-form" id="new-entry">
+
+    <div class="form-group">
+        <label for="packlist-items">Add Item(s):</label>
+        <input type="text" class="form-control" id="packlist-items" placeholder="Enter items you want to add.">
+    </div>
+    <button type="submit" class="btn btn-primary add-list" data-id="{{id}}" id="submit-entry">Add Item</button>
+</form>
+
+<script src="/js/packlist.js"></script>
