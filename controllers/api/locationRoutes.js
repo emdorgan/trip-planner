@@ -5,9 +5,9 @@ const { Location } = require('../../models');
 // add new location
 router.post('/', withAuth, async (req, res) => {
     try {
+        console.log(req.body)
         const newLocation = await Location.create({
             ...req.body,
-            user_id: req.session.user_id,
         });
         res.status(200).json(newLocation);
     } catch (err) {

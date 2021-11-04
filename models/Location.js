@@ -46,10 +46,6 @@ Location.init(
         key: 'id',
       },
     },
-    sequence: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
     contact: {
       type: DataTypes.STRING,
       allowNull: true,

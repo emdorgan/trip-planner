@@ -16,4 +16,42 @@ const delBtn = async (event) => {
     }
 };
 
+const addNewLocation = async (event) => {
+    event.preventDefault();
+
+    const location_name = document.querySelector('#location-name').value.trim();
+    const location_address = document.querySelector('#location-address').value.trim();
+    const vehicle = document.querySelector('#vehicle').value.trim();
+    const transit_details = document.querySelector('#transit-details').value.trim();
+    const start_date = document.querySelector('#start-date').value.trim();
+    const end_date = document.querySelector('#end-date').value.trim();
+    const contact = document.querySelector('#contact-info').value.trim();
+    const location_activities = document.querySelector('#location-activities').value.trim();
+    if (location_name && location_address && transit_details && start_date && end_date && location_activities) {
+        const trip_id = document.getElementById('submit-entry').getAttribute('data-id');
+
+        const response = await fetch(`/api/locations`, {
+            method: 'POST',
+            body: JSON.stringify({ location_name, location_address, contact, vehicle, transit_details, start_date, end_date, location_activities, trip_id }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (response.ok) {
+            document.location.replace(`/trip/${trip_id}`)
+        }
+        else {
+            alert('Failed to create new location');
+        }
+    }
+
+}
+
+const revealBtnHandler = (event) => {
+    document.getElementById('new-location').setAttribute('class', 'new-post-form')
+    document.querySelector('.new-post-form').addEventListener('submit', addNewLocation)
+}
+
+document.querySelector('#reveal-new-location').addEventListener('click', revealBtnHandler);
 document.querySelector('.my-locations').addEventListener('click', delBtn)
