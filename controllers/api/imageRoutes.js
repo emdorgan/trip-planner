@@ -5,6 +5,7 @@ const { Image } = require('../../models');
 
 // route to post 
 router.post('/upload', withAuth, upload.single('image'), (req, res) => {
+    console.log(req.body);
     res.render("album");
 });
 
