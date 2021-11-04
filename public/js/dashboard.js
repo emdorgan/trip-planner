@@ -1,3 +1,11 @@
+$( function() {
+    $( "#start-date" ).datepicker();
+  } );
+  $( function() {
+    $( "#end-date" ).datepicker();
+  } );
+
+
 const revealBtnHandler = async (event) => {
 
 }
