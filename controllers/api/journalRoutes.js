@@ -5,6 +5,7 @@ const { Journal } = require('../../models');
 // add new journal entry
 router.post('/', withAuth, async (req, res) => {
     try {
+        console.log(req.body.title, req.body.content);
         const newJournal = await Journal.create({
             ...req.body,
             user_id: req.session.user_id,
@@ -21,7 +22,8 @@ router.put('/:id', withAuth, async (req, res) => {
         const journalData = await Journal.update(req.body,
             {
                 where: {
-                    id: req.params.id }
+                    id: req.params.id
+                }
             })
         if (!journalData) {
             res.status(404).json({ message: 'Could not find a journal entry with that id' })

@@ -1,45 +1,92 @@
-<h2>{{name}}</h2> 
+<h2>{{name}}</h2>
 <a href="/trip/{{id}}/packlist">
     <button type="button" class="btn btn-info" id="pack-list">Packing List</button>
 </a>
 <a href="/trip/{{id}}/journal">
-<button type="button" class="btn btn-info" id="journal">Journal</button>
+    <button type="button" class="btn btn-info" id="journal">Journal</button>
 </a>
 <div class="my-locations">
     {{#each locations as |location|}}
-        <div class="row">
-            <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col-md-1">
-                {{location.sequence}}.
-            </a>
-            <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
-                {{location.location_name}}
-            </a>
-            <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
-                {{location.location_address}}
-            </a>
-            <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
-                <p>
-                    From: {{location.start_date}}
-                </p>
-                <p>
-                    To: {{location.end_date}}
-                </p>
-            </a>
-            <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
-                <p>Traveling by {{location.vehicle}}</p>
-                <p>Transit Details: {{location.transit_details}}</p>
-            </a>
-            <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
-                {{location.location_activities}}
-            </a>
-            <div class="col">
-                <button type="button" class="btn btn-danger" data-trip="{{trip_id}}" data-id="{{id}}" id="delete">Delete</button>
-            </div>
+    <div class="row">
+        <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col-md-1">
+            {{location.sequence}}.
+        </a>
+        <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
+            {{location.location_name}}
+        </a>
+        <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
+            {{location.location_address}}
+        </a>
+        <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
+            <p>
+                From: {{location.start_date}}
+            </p>
+            <p>
+                To: {{location.end_date}}
+            </p>
+        </a>
+        <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
+            <p>Traveling by {{location.vehicle}}</p>
+            <p>Transit Details: {{location.transit_details}}</p>
+        </a>
+        <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
+            {{location.location_activities}}
+        </a>
+        <div class="col">
+            <button type="button" class="btn btn-danger" data-trip="{{trip_id}}" data-id="{{id}}"
+                id="delete">Delete</button>
         </div>
+    </div>
     {{/each}}
 </div>
 <a href="/">
     <button type="button" class="btn btn-info">Back to My Trips</button>
 </a>
-<button type="button" class="btn btn-success">Add destination</button>
+<button type="button" class="btn btn-success">Add New Location</button>
+
+<form class="comment-form" id="new-location">
+    <div class="form-group">
+        <label for="location-name">Location Name:</label>
+        <input type="text" class="form-control" id="location-name" placeholder="Enter Location">
+    </div>
+
+    <div class="form-group">
+        <label for="location-address">Location Address:</label>
+        <input type="text" class="form-control" id="location-address" placeholder="Enter the Address">
+    </div>
+
+    <div class="form-group">
+        <label for="vehicle">Vehicle/Mode of Transportation:</label>
+        <input type="text" class="form-control" id="vehicle" placeholder="Enter Vehicle/Mode of Transportation">
+    </div>
+
+    <div class="form-group">
+        <label for="transit-details">Transit Details:</label>
+        <input type="text" class="form-control" id="transit-details"
+            placeholder="Enter any helpful information regarding your transit to this location.">
+    </div>
+
+    <div class="form-group">
+        <label for="start-date">Start Date:</label>
+        <input type="text" class="form-control" id="start-date"
+            placeholder="Enter the day/time you will arrive at this location.">
+    </div>
+
+    <div class="form-group">
+        <label for="end-date">End Date:</label>
+        <input type="text" class="form-control" id="end-date"
+            placeholder="Enter the day/time you will depart this location.">
+    </div>
+
+    <div class="form-group">
+        <label for="location-activities">Activities:</label>
+        <input type="text" class="form-control" id="location-activities"
+            placeholder="Enter the activities you will enjoy at this location.">
+    </div>
+
+    <button type="submit" class="btn btn-primary add-location" data-id="{{id}}" id="submit-entry">Submit</button>
+</form>
+
+
 <script src="/js/trip.js"></script>
+<script src="/js/location.js"></script>
