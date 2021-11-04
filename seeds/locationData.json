@@ -8,7 +8,6 @@
         "end_date": "31 Nov 2021",
         "location_activities": "Cook and hang out with g-ma",
         "trip_id": 1,
-        "sequence": 1,
         "contact": "Grandma's number: 5102222222"
     },
     {
@@ -20,7 +19,6 @@
         "end_date": "9 Dec 2021",
         "location_activities": "visit grandma's siblings",
         "trip_id": 1,
-        "sequence": 2,
         "contact": "Grandma's sisters number: +123204123345"
     },
     {
@@ -32,7 +30,6 @@
         "end_date": "15 May 2022",
         "location_activities": "orientation for the cruise",
         "trip_id": 2,
-        "sequence": 1,
         "contact": "501341234"
     },
     {
@@ -44,7 +41,6 @@
         "end_date": "28 June 2022",
         "location_activities": "visiting friends",
         "trip_id": 3,
-        "sequence": 1,
         "contact": "1231231442"
     }
 ]
