@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
-const upload = require('../utils/upload');
 const { User, Trip, Location, Journal, Packlist } = require('../models');
 
 //route to display one trip when clicked on
@@ -123,9 +122,6 @@ router.get('/upload', withAuth, (req, res) => {
     res.render("album");
 });
 
-// route to post 
-router.post('/upload', upload.single('image'), (req, res) => {
-    res.send("Image Uploaded");
-});
+
 
 module.exports = router;
