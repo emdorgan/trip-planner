@@ -14,7 +14,7 @@ router.get('/trip/:id', withAuth, async (req, res) => {
         });
         const trip = tripData.get({ plain: true });
         console.log(trip)
-        res.render('locations', {
+        res.render('trip', {
             ...trip,
             logged_in: req.session.logged_in
         });
@@ -57,7 +57,7 @@ router.get('/trip/:trip/locations/:id', withAuth, async (req, res) => {
         const location = locationData.get({ plain: true });
         console.log(location);
         res.render('mylocation', {
-            location,
+            ...location,
             logged_in: req.session.logged_in
         });
     } catch (err) {

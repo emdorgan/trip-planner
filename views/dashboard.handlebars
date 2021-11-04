@@ -21,12 +21,12 @@
   </a>
   <div class="col">
     <a href="/trip/{{trip.id}}/packlist">
-      <button type="button" class="btn btn-info" data-id="{{trip.id}}" id="pack-list">Packing List</button>
+      <button type="button" class="btn btn-info" id="pack-list">Packing List</button>
     </a>
   </div>
     <div class="col">
       <a href="/trip/{{trip.id}}/journal">
-        <button type="button" class="btn btn-info" data-id="{{trip.id}}" id="journal">Journal</button>
+        <button type="button" class="btn btn-info" id="journal">Journal</button>
       </a>
   </div>
   <div class="col-md-2">
@@ -34,4 +34,13 @@
   </div>
 </div>
 {{/each}}
+<button type="button" class="btn btn-success" id="reveal-new-trip">New Trip!</button>
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Trip Name:</label>
+    <input type="text" class="form-control" id="trip-name">
+  </div>
+</form>
+
+
 <script src="/js/dashboard.js"></script>
