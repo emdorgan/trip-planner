@@ -1,30 +1,30 @@
 <h2>{{name}}</h2>
 {{#each locations as |location|}}
 <div class="row">
-    <div class="col-md-1">
+    <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col-md-1">
         {{location.sequence}}.
-    </div>
-    <div class="col">
+    </a>
+    <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
         {{location.location_name}}
-    </div>
-    <div class="col">
+    </a>
+    <a class="col">
         {{location.location_address}}
-    </div>
-    <div class="col">
+    </a>
+    <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
         <p>
             From: {{location.start_date}}
         </p>
         <p>
             To: {{location.end_date}}
         </p>
-    </div>
-    <div class="col">
+    </a>
+    <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
         <p>Traveling by {{location.vehicle}}</p>
         <p>Transit Details: {{location.transit_details}}</p>
-    </div>
-    <div class="col">
+    </a>
+    <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
         {{location.location_activities}}
-    </div>
+    </a>
     <div class="col">
         <button type="button" class="btn btn-danger" data-id="{{id}}" id="delete" ><i class="far fa-trash-alt"></i></button>
     </div>

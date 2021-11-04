@@ -1,1 +1,10 @@
-{{!-- This will render the current location that the user clicked on on their trip and show relevant info --}}
+<h2>{{location_name}}</h2>
+<div class="row">Address: {{location_address}}</div>
+<div class="row">Contact Info: {{contact}}</div>
+<div class="row">Arrive on {{start_date}}</div>
+<div class="row">Leave on {{end_date}}</div>
+<div class="row">Travel by {{vehicle}}</div>
+{{#if transit_details}}
+<div class="row">Travel notes: {{transit_details}}</div>
+{{/if}}
+<div class="row">Activities: {{location_activities}}</div>
