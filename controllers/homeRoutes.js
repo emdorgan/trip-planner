@@ -3,18 +3,19 @@ const withAuth = require('../utils/auth');
 const { User, Trip, Location, Journal, Packlist } = require('../models');
 
 //route to display one trip when clicked on
-router.get('/trip/:id', async (req, res) => {
+router.get('/trip/:id', withAuth, async (req, res) => {
     try {
         const tripData = await Trip.findByPk(req.params.id, {
             include: [
                 {
-                    model: User,
+                    model: Location,
                 },
             ],
         });
         const trip = tripData.get({ plain: true });
-        res.render('mytrip', {
-            trip,
+        console.log(trip)
+        res.render('locations', {
+            ...trip,
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -43,23 +44,18 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 //route to location; rendering information to mylocation handlebars
-router.get('./trip/:id/location/' , async (req, res) => {
+//work on this once I got the trip to be filled out
+router.get('/trip/:trip/locations/:id', withAuth, async (req, res) => {
     try {
-        const locationData = await Location.findAll({
-            // this needs to be tested
-            where: {
-            trip_id: req.params.id,
-            user_id: req.session.id 
-        }
-          }, {
+        const locationData = await Location.findByPk(req.params.id, {
             include: [
                 {
                     model: Trip,
                 },
             ],
         });
-        console.log(locationData);
         const location = locationData.get({ plain: true });
+        console.log(location);
         res.render('mylocation', {
             location,
             logged_in: req.session.logged_in
@@ -70,22 +66,17 @@ router.get('./trip/:id/location/' , async (req, res) => {
 });
 
 //route to Journal , rendering information to journal handlebars
-router.get('./trip/:id/journal/' , async (req, res) => {
+router.get('/trip/:id/journal/', withAuth, async (req, res) => {
     try {
-        const journalData = await Journal.findAll({
-            where: {
-                trip_id: req.params.id,
-                user_id: req.session.id 
-            }
-        }, {
+        const journalData = await Trip.findByPk(req.params.id, {
             include: [
                 {
-                    model: Trip,
+                    model: Journal,
                 },
             ],
         });
-        console.log(journalData);
         const journal = journalData.get({ plain: true });
+        console.log(journal);
         res.render('journal', {
             journal,
             logged_in: req.session.logged_in
@@ -96,17 +87,18 @@ router.get('./trip/:id/journal/' , async (req, res) => {
 });
 
 //route to Packlist , rendering information to packlist handlebars
-router.get('./trip/:id/packlist/' , async (req, res) => {
+router.get('/trip/:id/packlist/' , withAuth, async (req, res) => {
     try {
-        const packlistData = await Packlist.findAll(req.params.id, {
+        const packlistData = await Trip.findByPk(req.params.id, {
             include: [
                 {
-                    model: Trip,
+                    model: Packlist,
                 },
             ],
         });
         console.log(packlistData);
         const packlist = packlistData.get({ plain: true });
+        console.log(packlist);
         res.render('packlist', {
             packlist,
             logged_in: req.session.logged_in

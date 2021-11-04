@@ -6,21 +6,31 @@
 </div>
 {{#each trips as |trip|}}
 <div class="row">
-  <div class="col">
+  <a href="/trip/{{trip.id}}" class="col">
     <h3>
       {{trip.name}}
     </h3>
-  </div>
-  <div class="col">
+  </a>
+  <a href="/trip/{{trip.id}}" class="col">
     <p>
       Start Date: {{trip.start_date}}
     </p>
     <p>
       End Date: {{trip.end_date}}
     </p>
-  </div>
+  </a>
   <div class="col">
-
+    <a href="/trip/{{trip.id}}/packlist">
+      <button type="button" class="btn btn-info" data-id="{{trip.id}}" id="pack-list">Packing List</button>
+    </a>
+  </div>
+    <div class="col">
+      <a href="/trip/{{trip.id}}/journal">
+        <button type="button" class="btn btn-info" data-id="{{trip.id}}" id="journal">Journal</button>
+      </a>
+  </div>
+  <div class="col-md-2">
+    <button type="button" class="btn btn-danger" data-id="{{trip.id}}" id="delete" ><i class="far fa-trash-alt"></i></button>
   </div>
 </div>
 {{/each}}
