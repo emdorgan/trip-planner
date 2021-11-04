@@ -1,3 +1,8 @@
 {{!-- User clicks on packlist for a specific trip --}}
-<h2>My Packing List</h2>
-{{items}}
+<h2>My Packing List for {{name}}</h2>
+<form>
+{{#each packlists as |packlist|}}
+    <input type="checkbox" name="{{packlist.itmes}}" >
+    <label for="{{packlist.items}}"> {{packlist.items}} </label><br>
+{{/each}}
+</form>
