@@ -8,13 +8,14 @@ router.get('/trip/:id', withAuth, async (req, res) => {
         const tripData = await Trip.findByPk(req.params.id, {
             include: [
                 {
-                    model: User,
+                    model: Location,
                 },
             ],
         });
         const trip = tripData.get({ plain: true });
-        res.render('mytrip', {
-            trip,
+        console.log(trip)
+        res.render('locations', {
+            ...trip,
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -43,18 +44,19 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 //route to location; rendering information to mylocation handlebars
-router.get('/trip/:id/locations/', withAuth, async (req, res) => {
+//work on this once I got the trip to be filled out
+router.get('/trip/:trip/locations/:id', withAuth, async (req, res) => {
     try {
-        const locationData = await Trip.findByPk(req.params.id, {
+        const locationData = await Location.findByPk(req.params.id, {
             include: [
                 {
-                    model: Location,
+                    model: Trip,
                 },
             ],
         });
-        console.log(locationData);
         const location = locationData.get({ plain: true });
-        res.render('locations', {
+        console.log(location);
+        res.render('mylocation', {
             location,
             logged_in: req.session.logged_in
         });
@@ -73,8 +75,8 @@ router.get('/trip/:id/journal/', withAuth, async (req, res) => {
                 },
             ],
         });
-        console.log(journalData);
         const journal = journalData.get({ plain: true });
+        console.log(journal);
         res.render('journal', {
             journal,
             logged_in: req.session.logged_in
