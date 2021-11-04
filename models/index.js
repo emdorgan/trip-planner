@@ -3,6 +3,7 @@ const Trip = require("./Trip");
 const Location = require("./Location");
 const Packlist = require("./Packlist");
 const Journal = require("./Journal");
+const Image = require("./Image");
 
 User.hasMany(Trip, {
     foreignKey: "user_id",
@@ -58,4 +59,13 @@ Location.belongsTo(Trip, {
     foreignKey: "trip_id",
 });
 
-module.exports = { User, Trip, Location, Packlist, Journal };
+User.hasMany(Image, {
+    foreignKey: "user_id",
+    onDelete: 'CASCADE'
+})
+
+Image.belongsTo(User, {
+    foreignKey: "user_id",
+});
+
+module.exports = { User, Trip, Location, Packlist, Journal , Image};

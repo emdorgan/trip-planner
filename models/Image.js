@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Image extends Model { }
+class Image extends Model {}
 
 Image.init(
     {
@@ -11,7 +11,7 @@ Image.init(
         primaryKey: true,
         autoIncrement: true,
     },
-    file_name: {
+    path_name: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -33,4 +33,4 @@ Image.init(
     }
 )
 
-modulel.export = Image;
+module.exports = Image;
