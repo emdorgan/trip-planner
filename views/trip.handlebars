@@ -5,38 +5,41 @@
 <a href="/trip/{{id}}/journal">
 <button type="button" class="btn btn-info" id="journal">Journal</button>
 </a>
-{{#each locations as |location|}}
-<div class="row">
-    <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col-md-1">
-        {{location.sequence}}.
-    </a>
-    <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
-        {{location.location_name}}
-    </a>
-    <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
-        {{location.location_address}}
-    </a>
-    <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
-        <p>
-            From: {{location.start_date}}
-        </p>
-        <p>
-            To: {{location.end_date}}
-        </p>
-    </a>
-    <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
-        <p>Traveling by {{location.vehicle}}</p>
-        <p>Transit Details: {{location.transit_details}}</p>
-    </a>
-    <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
-        {{location.location_activities}}
-    </a>
-    <div class="col">
-        <button type="button" class="btn btn-danger" data-id="{{id}}" id="delete" ><i class="far fa-trash-alt"></i></button>
-    </div>
+<div class="my-locations">
+    {{#each locations as |location|}}
+        <div class="row">
+            <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col-md-1">
+                {{location.sequence}}.
+            </a>
+            <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
+                {{location.location_name}}
+            </a>
+            <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
+                {{location.location_address}}
+            </a>
+            <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
+                <p>
+                    From: {{location.start_date}}
+                </p>
+                <p>
+                    To: {{location.end_date}}
+                </p>
+            </a>
+            <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
+                <p>Traveling by {{location.vehicle}}</p>
+                <p>Transit Details: {{location.transit_details}}</p>
+            </a>
+            <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col">
+                {{location.location_activities}}
+            </a>
+            <div class="col">
+                <button type="button" class="btn btn-danger" data-trip="{{trip_id}}" data-id="{{id}}" id="delete">Delete</button>
+            </div>
+        </div>
+    {{/each}}
 </div>
-{{/each}}
 <a href="/">
     <button type="button" class="btn btn-info">Back to My Trips</button>
 </a>
 <button type="button" class="btn btn-success">Add destination</button>
+<script src="/js/trip.js"></script>
