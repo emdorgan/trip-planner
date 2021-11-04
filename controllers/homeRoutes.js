@@ -14,7 +14,7 @@ router.get('/trip/:id', withAuth, async (req, res) => {
             ],
         });
         const trip = tripData.get({ plain: true });
-        console.log(trip)
+
         res.render('trip', {
             ...trip,
             logged_in: req.session.logged_in
@@ -30,11 +30,11 @@ router.get('/', withAuth, async (req, res) => {
 
         const userData = await User.findByPk(req.session.user_id, {
 
-            attributes: {exclude: ['password'] },
+            attributes: { exclude: ['password'] },
             include: [{ model: Trip }]
         })
         const user = userData.get({ plain: true });
-        console.log(user);
+
         res.render('dashboard', {
             ...user,
             logged_in: true
@@ -56,7 +56,7 @@ router.get('/trip/:trip/locations/:id', withAuth, async (req, res) => {
             ],
         });
         const location = locationData.get({ plain: true });
-        console.log(location);
+
         res.render('mylocation', {
             ...location,
             logged_in: req.session.logged_in
@@ -77,7 +77,7 @@ router.get('/trip/:id/journal/', withAuth, async (req, res) => {
             ],
         });
         const journal = journalData.get({ plain: true });
-        console.log(journal);
+
         res.render('journal', {
             ...journal,
             logged_in: req.session.logged_in
@@ -88,7 +88,7 @@ router.get('/trip/:id/journal/', withAuth, async (req, res) => {
 });
 
 //route to Packlist , rendering information to packlist handlebars
-router.get('/trip/:id/packlist/' , withAuth, async (req, res) => {
+router.get('/trip/:id/packlist/', withAuth, async (req, res) => {
     try {
         const packlistData = await Trip.findByPk(req.params.id, {
             include: [
