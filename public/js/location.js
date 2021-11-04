@@ -10,7 +10,7 @@ const addNewLocation = async (event) => {
     const location_activities = document.querySelector('#location-activities').value.trim();
     if (location_name && location_address && vehicle && transit_details && start_date && end_date && location_activities) {
         const trip_id = document.getElementById('submit-entry').getAttribute('data-id');
-        const response = await fetch(`/api/locations`, {
+        const response = await fetch(`/api/trips`, {
             method: 'POST',
             body: JSON.stringify({ location_name, location_address, vehicle, transit_details, start_date, end_date, location_activities, trip_id }),
             headers: {
@@ -19,7 +19,7 @@ const addNewLocation = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace(`/trip/${trip_id}/location/`)
+            document.location.replace(`/trip/${trip_id}`)
         }
         else {
             alert('Failed to create new location');
@@ -28,4 +28,4 @@ const addNewLocation = async (event) => {
 
 }
 
-document.querySelector('.add-list').addEventListener('click', addNewLocation);
+document.querySelector('#new-location').addEventListener('click', addNewLocation);
