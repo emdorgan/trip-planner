@@ -1,5 +1,5 @@
-const newBtnHandler = async (event) => {
-    
+const revealBtnHandler = async (event) => {
+
 }
 
-document.querySelector('#new-trip').addEventListener('click', newBtnHandler);
+document.querySelector('#reveal-new-trip').addEventListener('click', revealBtnHandler);
