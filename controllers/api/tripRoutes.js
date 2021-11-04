@@ -2,9 +2,12 @@ const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const { Trip } = require('../../models');
 
+// endpoint for /api/trips
+
 // add new trip
-router.get('/', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
+        console.log(req.body.tripName);
         const newTrip = await Trip.create({
             ...req.body,
             user_id: req.session.user_id,
