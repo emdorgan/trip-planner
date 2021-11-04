@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
-const { User, Trip, Location, Journal, Packlist } = require('../models');
+const { User, Trip, Location, Journal, Packlist, Image } = require('../models');
 
 //route to display one trip when clicked on
 router.get('/trip/:id', withAuth, async (req, res) => {
@@ -26,7 +26,7 @@ router.get('/trip/:id', withAuth, async (req, res) => {
 // homepage for authenticated user is the dashboard
 router.get('/', withAuth, async (req, res) => {
     try {
-
+        console.log(req.session.user_id)
         const userData = await User.findByPk(req.session.user_id, {
 
             attributes: { exclude: ['password'] },
@@ -119,22 +119,30 @@ router.get('/login', (req, res) => {
 
 // route to get the images to album
 router.get('/album', withAuth, async (req, res) => {
-    // console.log(req);
     try {
+        console.log(req.session.user_id)
         const userData = await User.findByPk(req.session.user_id, {
 
-            attributes: {exclude: ['password'] },
+            attributes: { exclude: ['password'] },
+            include: [{ model: Image }]
         })
         const user = userData.get({ plain: true });
         console.log(user);
-        // res.render('album', {
-        //     ...user,
-        //     logged_in: req.session.logged_in
-        // });
+        res.render('album', {
+            ...user,
+            logged_in: true
+        });
     } catch (err) {
         res.status(500).json(err);
     }
-    // res.render('album');
+});
+
+router.get('/upload', withAuth, async (req, res) => {
+    try {
+        res.render('upload', {logged_in: req.session.logged_in})
+    }catch (err) {
+        res.status(500).json(err);
+    }
 });
 
 
