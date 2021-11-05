@@ -225,3 +225,19 @@ em{
   position: absolute;
   right: 10px;
 }
+
+.new-packlist-item {
+  border-top: 2px solid black;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.custom-live-journal {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid black;
+}
+
+.custom-live-journal > button {
+  margin-top: 10px;
+}
