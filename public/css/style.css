@@ -99,6 +99,20 @@ main {
   background-color: #D4F1F4;
 }
 
+.custom-login-signup {
+  border: 1px groove rgb(32, 32, 32);
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  background-color: #D4F1F4;
+}
+.custom-login-signup > button{
+  margin-top: 10px;
+}
+.custom-login-signup > div > label {
+  margin: 5px;
+}
 .new-trip {
   margin: 10px;
 }
@@ -111,12 +125,17 @@ main {
   box-shadow: 3px 3px 3px black;
 }
 
-.custom-journal-btn {
+.custom-btn {
+  background-color: rgb(16, 71, 189);
+  border-color: rgb(16, 71, 189);
+  color: white;
   font-size: .9em;
 }
 
-.custom-pack-btn{
-  font-size: .9em;
+.custom-btn:hover{
+  background-color: rgb(38, 107, 255);
+  border-color: rgb(38, 107, 255);
+  color: white;
 }
 
 .custom-delete-btn {

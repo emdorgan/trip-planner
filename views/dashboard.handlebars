@@ -7,7 +7,7 @@
 <div class="my-trips">
   {{#each trips as |trip|}}
   <div class="row custom-row">
-    <a href="/trip/{{trip.id}}" class="col-md-4 align-self-center">
+    <a href="/trip/{{trip.id}}" class="col-md-3 align-self-center">
       <h3 class="trip-name">
         {{trip.name}}
       </h3>
@@ -22,12 +22,12 @@
     </a>
     <div class="col-md-2 align-self-center">
       <a href="/trip/{{trip.id}}/packlist">
-        <button type="button" class="btn btn-info custom-pack-btn" id="pack-list">Packing List</button>
+        <button type="button" class="btn btn-info custom-btn" id="pack-list">Packing List</button>
       </a>
     </div>
-      <div class="col-md-1 align-self-center">
+      <div class="col-md-2 align-self-center">
         <a href="/trip/{{trip.id}}/journal">
-          <button type="button" class="btn btn-info custom-journal-btn" id="journal">Journal</button>
+          <button type="button" class="btn btn-info custom-btn" id="journal">Journal</button>
         </a>
     </div>
     <div class="col-md-1 align-self-center">
