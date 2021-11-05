@@ -68,6 +68,7 @@ h2 {
   margin: 20px 20px 20px 0px;
   padding: 10px;
   border-bottom: 2px solid black;
+  width: fit-content;
 }
 
 #logout {
@@ -92,33 +93,55 @@ main {
 
 .custom-row {
   border: 1px groove rgb(32, 32, 32);
-  margin: 5px;
+  margin: 10px;
   padding: 5px;
   border-radius: 5px;
   background-color: #D4F1F4;
 }
 
 .new-trip {
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .custom-row {
-  font-size: 1.5em;
+  font-size: 1.3em;
+}
+
+.custom-row:hover {
+  box-shadow: 3px 3px 3px black;
 }
 
 .custom-journal-btn {
-  font-size: 1em;
+  font-size: .9em;
 }
 
 .custom-pack-btn{
-  font-size: 1em;
+  font-size: .9em;
 }
 
 .custom-delete-btn {
-  font-size: 1em;
+  font-size: .9em;
 }
 
 .trip-name{
-  font-size: 1.8em;
+  font-size: 1.5em;
   overflow: hidden;
+}
+
+#new-trip{
+  border: 1px groove rgb(32, 32, 32);
+  margin: 5px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #D4F1F4;
+  font-size: 1.5em;
+  width: fit-content;
+}
+
+#new-trip > div{
+  margin: 10px;
+}
+
+.custom-input {
+  width: 300px;
 }
