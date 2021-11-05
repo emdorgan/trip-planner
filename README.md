@@ -1,4 +1,6 @@
 # Traveleeze
+
+This app...
 ​
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ​
@@ -8,11 +10,18 @@
 ​
 ## Getting Started
 ​
-​
+​* Upon loading the site, the user can log in or create an account (and then log in) 
+* The user will see a list of their trips
+* A new trip can be added by clicking "New Trip"
+* After creating a trip, the user will be able to access the trip by clicking on it
+* To add "locations" or pitstops, click "add new location"
+* Users are also able to create journal entries for each trip by clicking "Add Journal"
+* Users can create packing lists by clicking on "Packing List" and then "New Item"
+* All trip features (trip, locations, journals, and packlists) can be deleted by clicking the delete button
 ​
 ## Deployed Link
 ​
-* [See Live Site](#)
+* [See Live Site](https://evening-fjord-31070.herokuapp.com/)
 ​
 ## Screenshots
 ​
@@ -42,9 +51,10 @@
 * **Kiri Smith** 
 * **Daniel Vo** 
 ​
-- [Link to Portfolio Site](https://emdorgan.github.io/updated-portfolio/)
-- [Link to Github](https://github.com/emdorgan)
-- [Link to LinkedIn](https://www.linkedin.com/in/emily-dorgan/)
+- [Connect with Emily on LinkedIn!](https://www.linkedin.com/in/emily-dorgan/)
+- [Connect with Kiri on LinkedIn!](https://www.linkedin.com/in/kiri-lynne-smith/)
+- [Connect with Daniel on LinkedIn!](https://www.linkedin.com/in/daniel-vo-57b00521b/)
+
 ​
 ## License
 ​
