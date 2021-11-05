@@ -7,17 +7,37 @@ a {
   text-decoration: none;
   color: black;
 }
+.custom-link {
+  color: black;
+  margin-left: 20px;
+}
+
+.custom-brand:hover {
+  color: black;
+}
+
+.custom-link:hover {
+  text-decoration-line: underline;
+  color: black;
+}
+
 main a:hover {
-  color: rgb(67, 187, 131);
+  color: rgb(0, 0, 0);
 }
 
 body {
-  background-color: rgb(199, 249, 255);
+  background-color: rgb(125, 206, 253);
   color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h1 {
   font-size: 2em;
+  margin: 20px 20px 20px 30px;
+}
+
+.fa-bars {
+  font-size: 2.5em;
 }
 
 .custom-nav-buttons {
@@ -45,7 +65,7 @@ h1 {
 }
 
 h2 {
-  margin: 10px 20px 20px 0px;
+  margin: 20px 20px 20px 0px;
   padding: 10px;
   border-bottom: 2px solid black;
 }
@@ -59,10 +79,46 @@ h2 {
   right: 10px;
 }
 
-h1 {
-  margin: 20px;
+.nav-custom {
+  background-color: rgb(243, 201, 112);
+  position: fixed;
+  width: 100%;
+  top:0;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+main {
+  margin-top: 110px;
 }
 
-.nav-custom {
-  background-color: rgb(67, 187, 131);
+.custom-row {
+  border: 1px groove rgb(32, 32, 32);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #D4F1F4;
+}
+
+.new-trip {
+  margin-top: 10px;
+}
+
+.custom-row {
+  font-size: 1.5em;
+}
+
+.custom-journal-btn {
+  font-size: 1em;
+}
+
+.custom-pack-btn{
+  font-size: 1em;
+}
+
+.custom-delete-btn {
+  font-size: 1em;
+}
+
+.trip-name{
+  font-size: 1.8em;
+  overflow: hidden;
 }
