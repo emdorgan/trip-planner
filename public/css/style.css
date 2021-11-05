@@ -99,6 +99,34 @@ main {
   background-color: #D4F1F4;
 }
 
+.single-location {
+  border: 1px groove rgb(32, 32, 32);
+  margin: 10px 0px 30px 10px;
+  border-radius: 5px;
+  background-color: #D4F1F4;
+  width:fit-content;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+.packing-list-style {
+  border: 1px groove rgb(32, 32, 32);
+  margin: 10px 0px 20px 10px;
+  border-radius: 5px;
+  background-color: #D4F1F4;
+  width:fit-content;
+  padding: 15px;
+  font-size: 1.5em;
+}
+
+.packing-list-style button {
+  font-size: 1em
+}
+
+.individual-item {
+  margin: 5px;
+}
+
 .custom-login-signup {
   border: 1px groove rgb(32, 32, 32);
   margin: 10px;
@@ -129,7 +157,13 @@ main {
   background-color: rgb(16, 71, 189);
   border-color: rgb(16, 71, 189);
   color: white;
-  font-size: .9em;
+  font-size: 1.2em;
+}
+
+.fling-right {
+  position: absolute;
+  right: 10px;
+  top: 130px;
 }
 
 .custom-btn:hover{
@@ -147,18 +181,22 @@ main {
   overflow: hidden;
 }
 
-#new-trip{
+.trip-title {
+  font-size: 1.2em;
+}
+
+#new-trip, #new-location{
   border: 1px groove rgb(32, 32, 32);
   margin: 5px;
   padding: 15px;
   border-radius: 5px;
   background-color: #D4F1F4;
-  font-size: 1.5em;
   width: fit-content;
 }
 
-#new-trip > div{
-  margin: 10px;
+#new-trip > div, #new-location > div{
+  margin: 15px;
+  font-size: 1.5em;
 }
 
 .custom-input {
@@ -175,7 +213,7 @@ em{
   background-color: rgb(211, 172, 88);
   border-color: rgb(211, 172, 88);
   color: black;
-  font-size: 0.9em;
+  font-size: 1.3em;
 }
 
 .add-btn:hover, .add-btn:active {
@@ -183,7 +221,29 @@ em{
   border-color: rgb(172, 129, 37);
 }
 
+
 .logo {
   width: 100px;
   height: 100px;
+
+.back-btn {
+  position: absolute;
+  right: 10px;
+}
+
+.new-packlist-item {
+  border-top: 2px solid black;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.custom-live-journal {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid black;
+}
+
+.custom-live-journal > button {
+  margin-top: 10px;
+
 }
