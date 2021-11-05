@@ -221,6 +221,11 @@ em{
   border-color: rgb(172, 129, 37);
 }
 
+
+.logo {
+  width: 100px;
+  height: 100px;
+
 .back-btn {
   position: absolute;
   right: 10px;
@@ -274,4 +279,5 @@ em{
     display: block;
     margin-top: 5px;
   }
+
 }
