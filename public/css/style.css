@@ -85,7 +85,7 @@ h2 {
   position: fixed;
   width: 100%;
   top:0;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  z-index: 2;
 }
 main {
   margin-top: 110px;
@@ -245,5 +245,39 @@ em{
 
 .custom-live-journal > button {
   margin-top: 10px;
+}
+
+.upload-form > input{
+  display: block;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+@media only screen and (max-width: 1100px){
+  .custom-row{
+    font-size: 1.1em;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .custom-row{
+    font-size: 1.3em;
+  }
+  .custom-row > div{
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 440px){
+  #new-trip{
+    font-size: 1.1em;
+  }
+  .custom-input {
+    width: 250px;
+  }
+  .fling-right > a {
+    display: block;
+    margin-top: 5px;
+  }
 
 }
