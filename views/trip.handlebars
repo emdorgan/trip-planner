@@ -1,14 +1,16 @@
 <h2>{{name}}</h2>
-<a href="/trip/{{id}}/packlist">
-    <button type="button" class="btn btn-info" id="pack-list">Packing List</button>
-</a>
-<a href="/trip/{{id}}/journal">
-    <button type="button" class="btn btn-info" id="journal">Journal</button>
-</a>
+<div class="fling-right">
+    <a href="/trip/{{id}}/packlist">
+        <button type="button" class="btn custom-btn" id="pack-list">Packing List</button>
+    </a>
+    <a href="/trip/{{id}}/journal">
+        <button type="button" class="btn custom-btn" id="journal">Journal</button>
+    </a>
+</div>
 <div class="my-locations">
     {{#each locations as |location|}}
     <div class="row custom-row">
-        <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col-md-2 align-self-center">
+        <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col-md-2 align-self-center trip-title">
             {{location.location_name}}
         </a>
         <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col-md-3 align-self-center">
@@ -34,7 +36,7 @@
     {{/each}}
 </div>
 <a href="/">
-    <button type="button" class="btn btn-info">Back to My Trips</button>
+    <button type="button" class="btn custom-btn back-to-dashboard">Back to My Trips</button>
 </a>
 <button type="button" id="reveal-new-location" class="btn add-btn">Add New Location</button>
 <form class="hidden" id="new-location">
