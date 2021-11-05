@@ -8,13 +8,14 @@
 <div class="my-packlist">
     <div class="packing-list-style">
         {{#each packlists as |packlist|}}
-        <div class="individual-item col">
-            <input type="checkbox" name="{{packlist.itmes}}">
-            <label for="{{packlist.items}}"> {{packlist.items}} </label><br>
-        </div>
-        <div class="col-md-2">
-            <button type="button" class="btn btn-danger delete-journal" data-trip-id="{{id}}"
-                data-packlist-id="{{packlist.id}}" id="delete">Delete</button>
+        <div class="row">
+            <div class="individual-item">
+                <input type="checkbox" name="{{packlist.itmes}}">
+                <label for="{{packlist.items}}"> {{packlist.items}} </label>
+                <button type="button" class="btn btn-danger delete-journal custom-delete-btn" data-trip-id="{{id}}"
+                    data-packlist-id="{{packlist.id}}" id="delete">Delete</button>
+            </div>
+
         </div>
         {{/each}}
     </div>

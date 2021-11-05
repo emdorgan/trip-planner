@@ -114,13 +114,14 @@ main {
   margin: 10px 0px 20px 10px;
   border-radius: 5px;
   background-color: #D4F1F4;
-  width:fit-content;
+  width:500px;
   padding: 15px;
   font-size: 1.5em;
 }
 
-.packing-list-style button {
-  font-size: 1em
+.packing-list-style .custom-delete-btn {
+  font-size: .6em;
+  float: right;
 }
 
 .individual-item {

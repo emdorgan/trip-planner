@@ -12,7 +12,7 @@ const deleteJournalHandler = async (event) => {
                 method: 'DELETE',
             });
             if (response.ok) {
-                document.location.replace(`/trip/${trip_id}/journal/`)
+                document.location.reload();
             }
 
             else {
