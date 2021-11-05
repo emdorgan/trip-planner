@@ -1,9 +1,19 @@
 [
     {
-        "items": "black skirt, white tank, sandals",
+        "items": "black skirts",
         "user_id": 1,
         "trip_id": 1
     },
+    {
+        "items": "white tank",
+        "user_id": 1,
+        "trip_id": 1
+    },
+    {
+        "items": "sandals",
+        "user_id": 1,
+        "trip_id": 1
+    }, 
     {
         "items": "jeans, gray t-shirt, sneakers, socks",
         "user_id": 1,

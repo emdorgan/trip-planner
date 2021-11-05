@@ -1,3 +1,26 @@
+const deletePacklistHandler = async (event) => {
+
+    if (event.target.hasAttribute('data-packlist-id')) {
+        if (event.target.getAttribute('id') === 'delete') {
+
+            const trip_id = event.target.getAttribute('data-trip-id');
+
+            const packlist_id = event.target.getAttribute('data-packlist-id');
+
+            const response = await fetch(`/api/packlists/${packlist_id}`, {
+                method: 'DELETE',
+            });
+            if (response.ok) {
+                document.location.replace(`/trip/${trip_id}/packlist/`)
+            }
+
+            else {
+                alert('Failed to delete packing list');
+            }
+        }
+    }
+};
+
 const addNewList = async (event) => {
     event.preventDefault();
 
@@ -23,4 +46,7 @@ const addNewList = async (event) => {
 
 }
 
+document.querySelector('.my-packlist').addEventListener('click', deletePacklistHandler);
+
 document.querySelector('.add-list').addEventListener('click', addNewList);
+

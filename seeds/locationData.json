@@ -4,8 +4,8 @@
         "location_address": "1112 Example St, Ca 95607",
         "vehicle": "car",
         "transit_details": "Start driving at 9am",
-        "start_date": "28 Nov 2021",
-        "end_date": "31 Nov 2021",
+        "start_date": "Nov 28 2021",
+        "end_date": "Nov 31 2021",
         "location_activities": "Cook and hang out with g-ma",
         "trip_id": 1,
         "contact": "Grandma's number: 5102222222"
@@ -15,8 +15,8 @@
         "location_address": "Hanoi, Vietnam",
         "vehicle": "plane",
         "transit_details": "flight is at 10pm",
-        "start_date": "1 Dec 2021",
-        "end_date": "9 Dec 2021",
+        "start_date": "Dec 1 2021",
+        "end_date": "Dec 9 2021",
         "location_activities": "visit grandma's siblings",
         "trip_id": 1,
         "contact": "Grandma's sisters number: +123204123345"
@@ -26,8 +26,8 @@
         "location_address": "Cancun",
         "vehicle": "cruise",
         "transit_details": "check-in time is between 10-2pm",
-        "start_date": "8 May 2022",
-        "end_date": "15 May 2022",
+        "start_date": "May 8 2022",
+        "end_date": "May 15 2022",
         "location_activities": "orientation for the cruise",
         "trip_id": 2,
         "contact": "501341234"
@@ -37,8 +37,8 @@
         "location_address": "Paris, France",
         "vehicle": "plane",
         "transit_details": "flight at 9am",
-        "start_date": "14 June 2022",
-        "end_date": "28 June 2022",
+        "start_date": "June 14 2022",
+        "end_date": "June 28 2022",
         "location_activities": "visiting friends",
         "trip_id": 3,
         "contact": "1231231442"
