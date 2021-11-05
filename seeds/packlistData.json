@@ -13,74 +13,224 @@
         "items": "sandals",
         "user_id": 1,
         "trip_id": 1
-    }, 
+    },
     {
-        "items": "jeans, gray t-shirt, sneakers, socks",
+        "items": "jeans",
         "user_id": 1,
         "trip_id": 1
     },
     {
-        "items": "purple shorts, black shirt, black shoes",
+        "items": "gray t-shirt",
         "user_id": 1,
         "trip_id": 1
     },
     {
-        "items": "black pants, pink top, gray shoes",
+        "items": "sneakers",
+        "user_id": 1,
+        "trip_id": 1
+    },
+    {
+        "items": "socks",
+        "user_id": 1,
+        "trip_id": 1
+    },
+    {
+        "items": "purple shorts",
+        "user_id": 1,
+        "trip_id": 1
+    },
+    {
+        "items": "black shoes",
+        "user_id": 1,
+        "trip_id": 1
+    },
+    {
+        "items": "black shirt",
+        "user_id": 1,
+        "trip_id": 1
+    },
+    {
+        "items": "black pants",
         "user_id": 1,
         "trip_id": 2
     },
     {
-        "items": "gray pants, green t-shirt, sneakers, socks",
+        "items": "pink top",
         "user_id": 1,
         "trip_id": 2
     },
     {
-        "items": "denim shorts, red top, white shoes",
+        "items": "gray shoes",
         "user_id": 1,
         "trip_id": 2
     },
     {
-        "items": "black dress, red heels",
+        "items": "gray pants",
+        "user_id": 1,
+        "trip_id": 2
+    },
+    {
+        "items": "green t-shirt",
+        "user_id": 1,
+        "trip_id": 2
+    },
+    {
+        "items": "sneakers",
+        "user_id": 1,
+        "trip_id": 2
+    },
+    {
+        "items": "socks",
+        "user_id": 1,
+        "trip_id": 2
+    },
+    {
+        "items": "denim shorts",
+        "user_id": 1,
+        "trip_id": 2
+    },
+    {
+        "items": "red top",
+        "user_id": 1,
+        "trip_id": 2
+    },
+    {
+        "items": "white shoes",
+        "user_id": 1,
+        "trip_id": 2
+    },
+    {
+        "items": "black dress",
         "user_id": 1,
         "trip_id": 3
     },
     {
-        "items": "leggings, blue t-shirt, sneakers, socks",
+        "items": "red heels",
         "user_id": 1,
         "trip_id": 3
     },
     {
-        "items": "yoga pants, green tank top, flip flops",
+        "items": "leggings",
         "user_id": 1,
         "trip_id": 3
     },
     {
-        "items": "jeans, Nats t-shirt, black sneakers",
+        "items": "blue t-shirt",
+        "user_id": 1,
+        "trip_id": 3
+    },
+    {
+        "items": "sneakers",
+        "user_id": 1,
+        "trip_id": 3
+    },
+    {
+        "items": "socks",
+        "user_id": 1,
+        "trip_id": 3
+    },
+    {
+        "items": "yoga pants",
+        "user_id": 1,
+        "trip_id": 3
+    },
+    {
+        "items": "green tank top",
+        "user_id": 1,
+        "trip_id": 3
+    },
+    {
+        "items": "flip flops",
+        "user_id": 1,
+        "trip_id": 3
+    },
+    {
+        "items": "jeans",
         "user_id": 2,
         "trip_id": 1
     },
     {
-        "items": "gray shorts, white polo, Yeezys",
+        "items": "Nats t-shirt",
+        "user_id": 2,
+        "trip_id": 1
+    },
+    {
+        "items": "black sneakers",
+        "user_id": 2,
+        "trip_id": 1
+    },
+    {
+        "items": "gray shorts",
         "user_id": 2,
         "trip_id": 2
     },
     {
-        "items": "blue suit, red tie, tan leather boots",
+        "items": "white polo",
+        "user_id": 2,
+        "trip_id": 2
+    },
+    {
+        "items": "Yeezys",
+        "user_id": 2,
+        "trip_id": 2
+    },
+    {
+        "items": "blue suit",
         "user_id": 3,
         "trip_id": 1
     },
     {
-        "items": "black pants, white button up, brown boots",
+        "items": "red tie",
         "user_id": 3,
         "trip_id": 1
     },
     {
-        "items": "jeans, gray shirt, white shoes",
+        "items": "tan leather boots",
+        "user_id": 3,
+        "trip_id": 1
+    },
+    {
+        "items": "black pants",
+        "user_id": 3,
+        "trip_id": 1
+    },
+    {
+        "items": "white button up",
+        "user_id": 3,
+        "trip_id": 1
+    },
+    {
+        "items": "brown boots",
+        "user_id": 3,
+        "trip_id": 1
+    },
+    {
+        "items": "jeans",
         "user_id": 3,
         "trip_id": 2
     },
     {
-        "items": "sweatpants, white t-shirt, slippers",
+        "items": "gray shirt",
+        "user_id": 3,
+        "trip_id": 2
+    },
+    {
+        "items": "white shoes",
+        "user_id": 3,
+        "trip_id": 2
+    },
+    {
+        "items": "sweatpants",
+        "user_id": 3,
+        "trip_id": 2
+    },
+    {
+        "items": "white t-shirt",
+        "user_id": 3,
+        "trip_id": 2
+    },
+    {
+        "items": "slippers",
         "user_id": 3,
         "trip_id": 2
     }
