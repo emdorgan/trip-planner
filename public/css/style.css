@@ -182,3 +182,8 @@ em{
   background-color: rgb(172, 129, 37);
   border-color: rgb(172, 129, 37);
 }
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
