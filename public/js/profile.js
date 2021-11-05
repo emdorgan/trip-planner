@@ -1,1 +1,0 @@
-// Considering re-naming to mytrips.js since that's our 'profile' so to speak (unless we decide to make a profile page)

@@ -1,4 +1,10 @@
-<h2>My Album {{email}}</h2>
-{{#each images as |image|}}
- <img src="/Images/{{image.path_name}}">
-{{/each}}
+<h2>My Travel Album</h2>
+<div class="picture-album">
+    {{#each images as |image|}}
+        <div class="picture-frame">
+            <a href="/images/{{image.path_name}}">
+                <img src="/images/{{image.path_name}}">
+            </a>
+        </div>
+    {{/each}}
+</div>

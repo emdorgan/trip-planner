@@ -19,3 +19,18 @@ h1 {
 .hidden {
   display: none;
 }
+
+.picture-album {
+  display: flex;
+  justify-content:flex-start;
+  margin: 1%;
+  flex-wrap: wrap;
+}
+
+.picture-frame img {
+  width: 400px;
+  height: auto;
+}
+.picture-frame {
+  margin: 1%;
+}
