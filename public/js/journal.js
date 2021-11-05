@@ -1,3 +1,27 @@
+const deleteJournalHandler = async (event) => {
+    //event.preventDefault();
+
+    if (event.target.hasAttribute('data-journal-id')) {
+        if (event.target.getAttribute('id') === 'delete') {
+
+            const trip_id = event.target.getAttribute('data-trip-id');
+
+            const id = event.target.getAttribute('data-journal-id');
+
+            const response = await fetch(`/api/journals/${id}`, {
+                method: 'DELETE',
+            });
+            if (response.ok) {
+                document.location.replace(`/trip/${trip_id}/journal/`)
+            }
+
+            else {
+                alert('Failed to delete journal');
+            }
+        }
+    }
+};
+
 const addNewJournal = async (event) => {
     event.preventDefault();
 
@@ -24,4 +48,13 @@ const addNewJournal = async (event) => {
 
 }
 
+/*const revealBtnHandler = (event) => {
+    document.getElementById('new-trip').setAttribute('class', 'new-post-form')
+    document.querySelector('.new-post-form').addEventListener('submit', addNewTrip)
+}*/
+
 document.querySelector('.add-journal').addEventListener('click', addNewJournal);
+
+document.querySelector('.my-journals').addEventListener('click', deleteJournalHandler);
+
+/*document.querySelector('#reveal-new-trip').addEventListener('click', revealBtnHandler);*/

@@ -5,23 +5,29 @@
         <button type="button" class="btn custom-btn" id="journal">Journal</button>
     </a>
 </div>
-<div class ="packing-list-style">
-    {{#each packlists as |packlist|}}
-    <div class="individual-item">
-        <input type="checkbox" name="{{packlist.itmes}}">
-        <label for="{{packlist.items}}"> {{packlist.items}} </label><br>
-    </div>
-    {{/each}}
-
-    <form class="comment-form new-packlist-item" id="new-entry">
-
-        <div class="form-group">
-            <label for="packlist-items">Add Item(s):</label>
-            <input type="text" class="form-control" id="packlist-items" placeholder="Enter items you want to add.">
+<div class="my-packlist">
+    <div class="packing-list-style">
+        {{#each packlists as |packlist|}}
+        <div class="individual-item col">
+            <input type="checkbox" name="{{packlist.itmes}}">
+            <label for="{{packlist.items}}"> {{packlist.items}} </label><br>
         </div>
-        <button type="submit" class="btn add-btn add-list" data-id="{{id}}" id="submit-entry">Add Item</button>
-    </form>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-danger delete-journal" data-trip-id="{{id}}"
+                data-packlist-id="{{packlist.id}}" id="delete">Delete</button>
+        </div>
+        {{/each}}
+    </div>
 </div>
+<form class="comment-form new-packlist-item" id="new-entry">
+
+    <div class="form-group">
+        <label for="packlist-items">Add Item(s):</label>
+        <input type="text" class="form-control" id="packlist-items" placeholder="Enter items you want to add.">
+    </div>
+    <button type="submit" class="btn add-btn add-list" data-id="{{id}}" id="submit-entry">Add Item</button>
+</form>
+
 
 <a href="/trip/{{id}}">
     <button type="button" class="btn custom-btn">Back to {{name}}</button>
