@@ -14,10 +14,10 @@
     </a>
     <a href="/trip/{{trip.id}}" class="col-md-4 align-self-center">
       <p class ="custom-start-end">
-        Start Date: {{trip.start_date}}
+        <em>Start Date:</em> {{trip.start_date}}
       </p>
       <p class ="custom-start-end">
-        End Date: {{trip.end_date}}
+        <em>End Date:</em> {{trip.end_date}}
       </p>
     </a>
     <div class="col-md-2 align-self-center">
@@ -36,7 +36,7 @@
   </div>
   {{/each}}
 </div>
-<button type="button" class="btn btn-success new-trip" id="reveal-new-trip">New Trip!</button>
+<button type="button" class="btn new-trip add-btn" id="reveal-new-trip">New Trip!</button>
 <form class="hidden" id="new-trip">
   <div class="form-group">
     <label for="trip-name">Trip Name:</label>
@@ -50,7 +50,7 @@
     <label for="datepicker">End date: </label></br>
     <input type="date" id="end-date">
   </div>
-  <button type="submit" class="btn btn-success">Add New Trip</button>
+  <button type="submit" class="btn add-btn">Add New Trip</button>
 </form>
 
 

@@ -16,10 +16,10 @@
         </a>
         <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col-md-3 align-self-center">
             <p>
-                From: {{location.start_date}}
+                <em>From:</em> {{location.start_date}}
             </p>
             <p>
-                To: {{location.end_date}}
+                <em>To:</em> {{location.end_date}}
             </p>
         </a>
         <a href="/trip/{{trip_id}}/locations/{{location.id}}" class="col-md-3 align-self-center">
@@ -36,7 +36,7 @@
 <a href="/">
     <button type="button" class="btn btn-info">Back to My Trips</button>
 </a>
-<button type="button" id="reveal-new-location" class="btn btn-success">Add New Location</button>
+<button type="button" id="reveal-new-location" class="btn add-btn">Add New Location</button>
 <form class="hidden" id="new-location">
     <div class="form-group">
         <label for="location-name">Location Name:</label>
@@ -78,7 +78,7 @@
             placeholder="Enter the activities you will enjoy at this location.">
     </div>
 
-    <button type="submit" class="btn btn-primary add-location" data-id="{{id}}" id="submit-entry">Submit</button>
+    <button type="submit" class="btn btn-primary add-location add-btn" data-id="{{id}}" id="submit-entry">Submit</button>
 </form>
 
 <script src="/js/trip.js"></script>

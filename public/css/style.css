@@ -26,7 +26,7 @@ main a:hover {
 }
 
 body {
-  background-color: rgb(125, 206, 253);
+  background-color: rgb(126, 187, 223);
   color: black;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -81,7 +81,7 @@ h2 {
 }
 
 .nav-custom {
-  background-color: rgb(243, 201, 112);
+  background-color: rgb(228, 186, 97);
   position: fixed;
   width: 100%;
   top:0;
@@ -94,7 +94,7 @@ main {
 .custom-row {
   border: 1px groove rgb(32, 32, 32);
   margin: 10px;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
   background-color: #D4F1F4;
 }
@@ -122,7 +122,7 @@ main {
 }
 
 .custom-row:hover {
-  box-shadow: 3px 3px 3px black;
+  box-shadow: 0px 0px 5px black;
 }
 
 .custom-btn {
@@ -163,4 +163,22 @@ main {
 
 .custom-input {
   width: 300px;
+}
+
+em{
+  color:rgb(100, 100, 100);
+}
+#reveal-new-trip{
+  font-size:1.3em;
+}
+.add-btn {
+  background-color: rgb(211, 172, 88);
+  border-color: rgb(211, 172, 88);
+  color: black;
+  font-size: 0.9em;
+}
+
+.add-btn:hover, .add-btn:active {
+  background-color: rgb(172, 129, 37);
+  border-color: rgb(172, 129, 37);
 }
