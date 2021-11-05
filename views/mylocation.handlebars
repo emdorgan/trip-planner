@@ -1,19 +1,23 @@
 <h2>{{location_name}}</h2>
-<a href="/trip/{{trip.id}}/packlist">
-    <button type="button" class="btn btn-info" id="pack-list">Packing List</button>
-</a>
-<a href="/trip/{{trip.id}}/journal">
-    <button type="button" class="btn btn-info" id="journal">Journal</button>
-</a>
-<div class="row">Address: {{location_address}}</div>
-<div class="row">Contact Info: {{contact}}</div>
-<div class="row">Arrive on {{start_date}}</div>
-<div class="row">Leave on {{end_date}}</div>
-<div class="row">Travel by {{vehicle}}</div>
-{{#if transit_details}}
-<div class="row">Travel notes: {{transit_details}}</div>
-{{/if}}
-<div class="row">Activities: {{location_activities}}</div>
+<div class="fling-right">
+    <a href="/trip/{{trip.id}}/packlist">
+        <button type="button" class="btn custom-btn" id="pack-list">Packing List</button>
+    </a>
+    <a href="/trip/{{trip.id}}/journal">
+        <button type="button" class="btn custom-btn" id="journal">Journal</button>
+    </a>
+</div>
+<div class="single-location">
+    <p><em>Address:</em> {{location_address}}</P>
+    <p><em>Contact Info:</em> {{contact}}</p>
+    <p><em>Arrive on</em> {{start_date}}</p>
+    <p><em>Leave on</em> {{end_date}}</p>
+    <p><em>Travel by</em> {{vehicle}}</p>
+    {{#if transit_details}}
+    <p><em>Travel notes:</em> {{transit_details}}</p>
+    {{/if}}
+    <p><em>Activities:</em> {{location_activities}}</p>
+</div>
 <a href="/trip/{{trip.id}}">
-    <button type="button" class="btn btn-info">Back to {{trip.name}}</button>
+    <button type="button" class="btn custom-btn">Back to {{trip.name}}</button>
 </a>

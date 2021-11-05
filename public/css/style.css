@@ -99,6 +99,16 @@ main {
   background-color: #D4F1F4;
 }
 
+.single-location {
+  border: 1px groove rgb(32, 32, 32);
+  margin: 10px 0px 30px 10px;
+  border-radius: 5px;
+  background-color: #D4F1F4;
+  width:fit-content;
+  padding: 20px;
+  font-size: 1.5em;
+
+}
 .custom-login-signup {
   border: 1px groove rgb(32, 32, 32);
   margin: 10px;
@@ -193,7 +203,7 @@ em{
   border-color: rgb(172, 129, 37);
 }
 
-.back-to-dashboard {
+.back-btn {
   position: absolute;
   right: 10px;
 }
