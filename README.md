@@ -39,6 +39,8 @@
 ## Authors
 ​
 * **Emily Dorgan** 
+* **Kiri Smith** 
+* **Daniel Vo** 
 ​
 - [Link to Portfolio Site](https://emdorgan.github.io/updated-portfolio/)
 - [Link to Github](https://github.com/emdorgan)
