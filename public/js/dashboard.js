@@ -15,13 +15,25 @@ const btnHandler = async (event) => {
     }
 };
 
+
 // when submit is clicked, selects the various fields the user entered and saves to the database with an API call
 const addNewTrip = async (event) =>{
     event.preventDefault();
 
+    var options = { year: 'numeric', month: 'short', day: 'numeric' };
+   
+
     const name = document.querySelector('#trip-name').value.trim();
-    const start_date = document.querySelector('#start-date').value.trim();
-    const end_date = document.querySelector('#end-date').value.trim();
+
+    const s_date = document.querySelector('#start-date').value.trim();
+    const start = new Date(s_date);
+    const start_date = start.toLocaleDateString("en-US", options).toString();
+
+    const e_date = document.querySelector('#end-date').value.trim();
+    const end = new Date(e_date);
+    const end_date = end.toLocaleDateString("en-US", options).toString();
+
+    
     if(name && start_date && end_date){
         const response = await fetch('/api/trips', {
             method: 'POST',
