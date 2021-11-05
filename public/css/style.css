@@ -3,13 +3,21 @@
 *::after {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+main a:hover {
+  color: rgb(67, 187, 131);
+}
 
-body{
-  width: 100vw;
+body {
+  background-color: rgb(199, 249, 255);
+  color: black;
 }
 
 h1 {
-  font-size: 10em;
+  font-size: 2em;
 }
 
 .custom-nav-buttons {
@@ -48,5 +56,13 @@ h2 {
 
 .custom-log {
   position: absolute;
-  right: 0;
+  right: 10px;
+}
+
+h1 {
+  margin: 20px;
+}
+
+.nav-custom {
+  background-color: rgb(67, 187, 131);
 }
