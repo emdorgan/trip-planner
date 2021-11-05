@@ -6,12 +6,13 @@ const deletePacklistHandler = async (event) => {
             const trip_id = event.target.getAttribute('data-trip-id');
 
             const packlist_id = event.target.getAttribute('data-packlist-id');
-
+            console.log(trip_id)
+            console.log(packlist_id)
             const response = await fetch(`/api/packlists/${packlist_id}`, {
                 method: 'DELETE',
             });
             if (response.ok) {
-                document.location.replace(`/trip/${trip_id}/packlist/`)
+                document.location.reload();
             }
 
             else {

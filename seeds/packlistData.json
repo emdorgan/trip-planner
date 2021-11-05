@@ -146,92 +146,92 @@
     },
     {
         "items": "jeans",
-        "user_id": 2,
+        "user_id": 1,
         "trip_id": 1
     },
     {
         "items": "Nats t-shirt",
-        "user_id": 2,
+        "user_id": 1,
         "trip_id": 1
     },
     {
         "items": "black sneakers",
-        "user_id": 2,
+        "user_id": 1,
         "trip_id": 1
     },
     {
         "items": "gray shorts",
-        "user_id": 2,
+        "user_id": 1,
         "trip_id": 2
     },
     {
         "items": "white polo",
-        "user_id": 2,
+        "user_id": 1,
         "trip_id": 2
     },
     {
         "items": "Yeezys",
-        "user_id": 2,
+        "user_id": 1,
         "trip_id": 2
     },
     {
         "items": "blue suit",
-        "user_id": 3,
+        "user_id": 1,
         "trip_id": 1
     },
     {
         "items": "red tie",
-        "user_id": 3,
+        "user_id": 1,
         "trip_id": 1
     },
     {
         "items": "tan leather boots",
-        "user_id": 3,
+        "user_id": 1,
         "trip_id": 1
     },
     {
         "items": "black pants",
-        "user_id": 3,
+        "user_id": 1,
         "trip_id": 1
     },
     {
         "items": "white button up",
-        "user_id": 3,
+        "user_id": 1,
         "trip_id": 1
     },
     {
         "items": "brown boots",
-        "user_id": 3,
+        "user_id": 1,
         "trip_id": 1
     },
     {
         "items": "jeans",
-        "user_id": 3,
+        "user_id": 1,
         "trip_id": 2
     },
     {
         "items": "gray shirt",
-        "user_id": 3,
+        "user_id": 1,
         "trip_id": 2
     },
     {
         "items": "white shoes",
-        "user_id": 3,
+        "user_id": 1,
         "trip_id": 2
     },
     {
         "items": "sweatpants",
-        "user_id": 3,
+        "user_id": 1,
         "trip_id": 2
     },
     {
         "items": "white t-shirt",
-        "user_id": 3,
+        "user_id": 1,
         "trip_id": 2
     },
     {
         "items": "slippers",
-        "user_id": 3,
+        "user_id": 1,
         "trip_id": 2
     }
 ]
