@@ -18,16 +18,17 @@
 
         </div>
         {{/each}}
+    
+        <form class="comment-form new-packlist-item" id="new-entry">
+
+            <div class="form-group">
+                <label for="packlist-items">Add Item(s):</label>
+                <input type="text" class="form-control" id="packlist-items" placeholder="Enter items you want to add.">
+            </div>
+            <button type="submit" class="btn add-btn add-list add-packlist-item" data-id="{{id}}" id="submit-entry">Add Item</button>
+        </form>
     </div>
 </div>
-<form class="comment-form new-packlist-item" id="new-entry">
-
-    <div class="form-group">
-        <label for="packlist-items">Add Item(s):</label>
-        <input type="text" class="form-control" id="packlist-items" placeholder="Enter items you want to add.">
-    </div>
-    <button type="submit" class="btn add-btn add-list" data-id="{{id}}" id="submit-entry">Add Item</button>
-</form>
 
 
 <a href="/trip/{{id}}">

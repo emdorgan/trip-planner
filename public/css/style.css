@@ -255,6 +255,15 @@ em{
   font-size: 1.2em;
 }
 
+.add-packlist-item {
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+.add-journal{
+  font-size: 1em;
+}
+
 @media only screen and (max-width: 1100px){
   .custom-row{
     font-size: 1.1em;
