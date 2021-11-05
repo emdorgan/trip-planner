@@ -1,28 +1,31 @@
 {{!-- User clicks on packlist for a specific trip --}}
-<h2>My Packing List for {{name}}</h2>
-<a href="/trip/{{id}}/journal">
-    <button type="button" class="btn btn-info" id="journal">Journal</button>
-</a>
-<form>
+<h2>My Packing List for: {{name}}</h2>
+<div class="fling-right">
+    <a href="/trip/{{id}}/journal">
+        <button type="button" class="btn custom-btn" id="journal">Journal</button>
+    </a>
+</div>
+<div class ="packing-list-style">
     {{#each packlists as |packlist|}}
-    <input type="checkbox" name="{{packlist.itmes}}">
-    <label for="{{packlist.items}}"> {{packlist.items}} </label><br>
+    <div class="individual-item">
+        <input type="checkbox" name="{{packlist.itmes}}">
+        <label for="{{packlist.items}}"> {{packlist.items}} </label><br>
+    </div>
     {{/each}}
-</form>
+
+    <form class="comment-form new-packlist-item" id="new-entry">
+
+        <div class="form-group">
+            <label for="packlist-items">Add Item(s):</label>
+            <input type="text" class="form-control" id="packlist-items" placeholder="Enter items you want to add.">
+        </div>
+        <button type="submit" class="btn add-btn add-list" data-id="{{id}}" id="submit-entry">Add Item</button>
+    </form>
+</div>
 
 <a href="/trip/{{id}}">
-    <button type="button" class="btn btn-info">Back to {{name}}</button>
+    <button type="button" class="btn custom-btn">Back to {{name}}</button>
 </a>
 
-<button type="button" class="btn btn-success" id="reveal-new-list">Add To Your List</button>
-
-<form class="comment-form" id="new-entry">
-
-    <div class="form-group">
-        <label for="packlist-items">Add Item(s):</label>
-        <input type="text" class="form-control" id="packlist-items" placeholder="Enter items you want to add.">
-    </div>
-    <button type="submit" class="btn btn-primary add-list" data-id="{{id}}" id="submit-entry">Add Item</button>
-</form>
 
 <script src="/js/packlist.js"></script>

@@ -1,32 +1,33 @@
 {{!-- user clicks on a trip's journal --}}
 <h2>My journal for {{name}} </h2>
-<a href="/trip/{{id}}/packlist">
-    <button type="button" class="btn btn-info" id="pack-list">Packing List</button>
-</a>
-{{#each journals as |journal|}}
-<div class="row">
-    <div class="col">
-        {{journal.title}} : {{journal.content}}
-    </div>
+<div class="fling-right">
+    <a href="/trip/{{id}}/packlist">
+        <button type="button" class="btn custom-btn" id="pack-list">Packing List</button>
+    </a>
 </div>
-{{/each}}
-<a href="/trip/{{id}}">
-    <button type="button" class="btn btn-info">Back to {{name}}</button>
-</a>
-<button type="button" class="btn btn-success" id="reveal-new-journal">Add
-    Journal
-    Entry</button>
+<div class ="packing-list-style">
+    {{#each journals as |journal|}}
+    <div class="row">
+        <div class="col">
+            {{journal.title}} : {{journal.content}}
+        </div>
+    </div>
+    {{/each}}
 
-<form class="comment-form" id="new-entry">
-    <div class="form-group">
-        <label for="journal-title">Title:</label>
-        <input type="text" class="form-control" id="journal-title" placeholder="Enter Title">
-    </div>
-    <div class="form-group">
-        <label for="journal-content">Journal Entry:</label>
-        <input type="text" class="form-control" id="journal-content" placeholder="Enter Journal Content">
-    </div>
-    <button type="submit" class="btn btn-primary add-journal" data-id="{{id}}" id="submit-entry">Submit</button>
-</form>
+    <form class="comment-form custom-live-journal" id="new-entry">
+        <div class="form-group">
+            <label for="journal-title">Title:</label>
+            <input type="text" class="form-control" id="journal-title" placeholder="Enter Title">
+        </div>
+        <div class="form-group">
+            <label for="journal-content">Journal Entry:</label>
+            <input type="text" class="form-control" id="journal-content" placeholder="Enter Journal Content">
+        </div>
+        <button type="submit" class="btn add-journal add-btn" data-id="{{id}}" id="submit-entry">Add Entry</button>
+    </form>
+</div>
+<a href="/trip/{{id}}">
+    <button type="button" class="btn custom-btn">Back to {{name}}</button>
+</a>
 
 <script src="/js/journal.js"></script>
