@@ -290,5 +290,7 @@ em{
     display: block;
     margin-top: 5px;
   }
-
+  h1{
+    display: none;
+  }
 }
