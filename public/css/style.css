@@ -3,13 +3,41 @@
 *::after {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+.custom-link {
+  color: black;
+  margin-left: 20px;
+}
 
-body{
-  width: 100vw;
+.custom-brand:hover {
+  color: black;
+}
+
+.custom-link:hover {
+  text-decoration-line: underline;
+  color: black;
+}
+
+main a:hover {
+  color: rgb(0, 0, 0);
+}
+
+body {
+  background-color: rgb(126, 187, 223);
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h1 {
-  font-size: 10em;
+  font-size: 2em;
+  margin: 20px 20px 20px 30px;
+}
+
+.fa-bars {
+  font-size: 2.5em;
 }
 
 .custom-nav-buttons {
@@ -18,4 +46,139 @@ h1 {
 
 .hidden {
   display: none;
+}
+
+.picture-album {
+  display: flex;
+  justify-content:flex-start;
+  margin: 1%;
+  flex-wrap: wrap;
+}
+
+.picture-frame img {
+  width: 400px;
+  height: auto;
+  border-radius: 5px;
+}
+.picture-frame {
+  margin: 1%;
+}
+
+h2 {
+  margin: 20px 20px 20px 0px;
+  padding: 10px;
+  border-bottom: 2px solid black;
+  width: fit-content;
+}
+
+#logout {
+  font-size: 1.3rem;
+}
+
+.custom-log {
+  position: absolute;
+  right: 10px;
+}
+
+.nav-custom {
+  background-color: rgb(228, 186, 97);
+  position: fixed;
+  width: 100%;
+  top:0;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+main {
+  margin-top: 110px;
+}
+
+.custom-row {
+  border: 1px groove rgb(32, 32, 32);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #D4F1F4;
+}
+
+.custom-login-signup {
+  border: 1px groove rgb(32, 32, 32);
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  background-color: #D4F1F4;
+}
+.custom-login-signup > button{
+  margin-top: 10px;
+}
+.custom-login-signup > div > label {
+  margin: 5px;
+}
+.new-trip {
+  margin: 10px;
+}
+
+.custom-row {
+  font-size: 1.3em;
+}
+
+.custom-row:hover {
+  box-shadow: 0px 0px 5px black;
+}
+
+.custom-btn {
+  background-color: rgb(16, 71, 189);
+  border-color: rgb(16, 71, 189);
+  color: white;
+  font-size: .9em;
+}
+
+.custom-btn:hover{
+  background-color: rgb(38, 107, 255);
+  border-color: rgb(38, 107, 255);
+  color: white;
+}
+
+.custom-delete-btn {
+  font-size: .9em;
+}
+
+.trip-name{
+  font-size: 1.5em;
+  overflow: hidden;
+}
+
+#new-trip{
+  border: 1px groove rgb(32, 32, 32);
+  margin: 5px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #D4F1F4;
+  font-size: 1.5em;
+  width: fit-content;
+}
+
+#new-trip > div{
+  margin: 10px;
+}
+
+.custom-input {
+  width: 300px;
+}
+
+em{
+  color:rgb(100, 100, 100);
+}
+#reveal-new-trip{
+  font-size:1.3em;
+}
+.add-btn {
+  background-color: rgb(211, 172, 88);
+  border-color: rgb(211, 172, 88);
+  color: black;
+  font-size: 0.9em;
+}
+
+.add-btn:hover, .add-btn:active {
+  background-color: rgb(172, 129, 37);
+  border-color: rgb(172, 129, 37);
 }

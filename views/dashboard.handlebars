@@ -6,51 +6,51 @@
 </div>
 <div class="my-trips">
   {{#each trips as |trip|}}
-  <div class="row">
-    <a href="/trip/{{trip.id}}" class="col">
-      <h3>
+  <div class="row custom-row">
+    <a href="/trip/{{trip.id}}" class="col-md-3 align-self-center">
+      <h3 class="trip-name">
         {{trip.name}}
       </h3>
     </a>
-    <a href="/trip/{{trip.id}}" class="col">
-      <p>
-        Start Date: {{trip.start_date}}
+    <a href="/trip/{{trip.id}}" class="col-md-4 align-self-center">
+      <p class ="custom-start-end">
+        <em>Start Date:</em> {{trip.start_date}}
       </p>
-      <p>
-        End Date: {{trip.end_date}}
+      <p class ="custom-start-end">
+        <em>End Date:</em> {{trip.end_date}}
       </p>
     </a>
-    <div class="col">
+    <div class="col-md-2 align-self-center">
       <a href="/trip/{{trip.id}}/packlist">
-        <button type="button" class="btn btn-info" id="pack-list">Packing List</button>
+        <button type="button" class="btn btn-info custom-btn" id="pack-list">Packing List</button>
       </a>
     </div>
-      <div class="col">
+      <div class="col-md-2 align-self-center">
         <a href="/trip/{{trip.id}}/journal">
-          <button type="button" class="btn btn-info" id="journal">Journal</button>
+          <button type="button" class="btn btn-info custom-btn" id="journal">Journal</button>
         </a>
     </div>
-    <div class="col-md-2">
-      <button type="button" class="btn btn-danger delete" data-id="{{trip.id}}" id="delete" >Delete</button>
+    <div class="col-md-1 align-self-center">
+      <button type="button" class="btn btn-danger delete custom-delete-btn" data-id="{{trip.id}}" id="delete" >Delete</button>
     </div>
   </div>
   {{/each}}
 </div>
-<button type="button" class="btn btn-success" id="reveal-new-trip">New Trip!</button>
+<button type="button" class="btn new-trip add-btn" id="reveal-new-trip">New Trip!</button>
 <form class="hidden" id="new-trip">
   <div class="form-group">
     <label for="trip-name">Trip Name:</label>
-    <input type="text" class="form-control" id="trip-name">
+    <input type="text" class="form-control custom-input" id="trip-name">
   </div>
   <div class="form-group">
-    <label for="datepicker">Start date: </label>
+    <label for="datepicker">Start date: </label></br>
     <input type="date" id="start-date">
   </div>
   <div class="form-group">
-    <label for="datepicker">End date: </label>
+    <label for="datepicker">End date: </label></br>
     <input type="date" id="end-date">
   </div>
-  <button type="submit" class="btn btn-success">Add New Trip</button>
+  <button type="submit" class="btn add-btn">Add New Trip</button>
 </form>
 
 
