@@ -1,16 +1,13 @@
 # Traveleeze
 
-This app...
-​
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This app is a travel planner that allows authenticated users to plan their trips. Each trip is made up of multiple 'locations' and has a name, start date and end date. These locations all have their own start and end dates, along with transit details, mode of transport, and details about the activities. Each Trip also comes with a packing list that the user can add/delete to along with a journal that the user can add/delete to. Finally, the user can upload images and have them displayed in an album (NOTE: Even though this worked perfectly fine on local machines, it sadly does not work on Heroku where we have the app deployed). Please contact the devs if you happen to know a (preferably free) solution.
 ​
-## To Do list
-​
-* 
 ​
 ## Getting Started
 ​
-​* Upon loading the site, the user can log in or create an account (and then log in) 
+* Upon loading the site, the user can log in or create an account (and then log in) 
 * The user will see a list of their trips
 * A new trip can be added by clicking "New Trip"
 * After creating a trip, the user will be able to access the trip by clicking on it
@@ -25,7 +22,11 @@ This app...
 ​
 ## Screenshots
 ​
-​
+​![Making an entry](screenshots/making-entry.gif)
+​![Dashboard](screenshots/screenshot-1.png)
+​![Mobile trip](screenshots/screenshot-2.png)
+​![Mobile location](screenshots/screenshot-3.png)
+​![location details](screenshots/screenshot-4.png)
 ​
 ## Built With
 ​
@@ -48,12 +49,20 @@ This app...
 ## Authors
 ​
 * **Emily Dorgan** 
+
+- [Link to Portfolio Site](https://emdorgan.github.io/updated-portfolio/)
+- [Link to Github](https://github.com/emdorgan)
+- [Link to LinkedIn](https://www.linkedin.com/in/emily-dorgan/)
+
 * **Kiri Smith** 
+
+- [Link to Github](https://github.com/kiri-smith)
+- [Link to LinkedIn](https://www.linkedin.com/in/kiri-lynne-smith/)
+
 * **Daniel Vo** 
 ​
-- [Connect with Emily on LinkedIn!](https://www.linkedin.com/in/emily-dorgan/)
-- [Connect with Kiri on LinkedIn!](https://www.linkedin.com/in/kiri-lynne-smith/)
-- [Connect with Daniel on LinkedIn!](https://www.linkedin.com/in/daniel-vo-57b00521b/)
+- [Link to Github](https://github.com/danielvo1)
+- [Link to LinkedIn](https://www.linkedin.com/in/daniel-vo-57b00521b/)
 
 ​
 ## License
