@@ -19,12 +19,21 @@ const delBtn = async (event) => {
 const addNewLocation = async (event) => {
     event.preventDefault();
 
+    var options = { year: 'numeric', month: 'short', day: 'numeric' };
+
     const location_name = document.querySelector('#location-name').value.trim();
     const location_address = document.querySelector('#location-address').value.trim();
     const vehicle = document.querySelector('#vehicle').value.trim();
     const transit_details = document.querySelector('#transit-details').value.trim();
-    const start_date = document.querySelector('#start-date').value.trim();
-    const end_date = document.querySelector('#end-date').value.trim();
+    
+    const s_date = document.querySelector('#start-date').value.trim();
+    const start = new Date(s_date);
+    const start_date = start.toLocaleDateString("en-US", options).toString();
+
+    const e_date = document.querySelector('#end-date').value.trim();
+    const end = new Date(e_date);
+    const end_date = end.toLocaleDateString("en-US", options).toString();
+    
     const contact = document.querySelector('#contact-info').value.trim();
     const location_activities = document.querySelector('#location-activities').value.trim();
     if (location_name && location_address && transit_details && start_date && end_date && location_activities) {
