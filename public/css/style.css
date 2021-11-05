@@ -30,7 +30,23 @@ h1 {
 .picture-frame img {
   width: 400px;
   height: auto;
+  border-radius: 5px;
 }
 .picture-frame {
   margin: 1%;
+}
+
+h2 {
+  margin: 10px 20px 20px 0px;
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+#logout {
+  font-size: 1.3rem;
+}
+
+.custom-log {
+  position: absolute;
+  right: 0;
 }
