@@ -107,8 +107,26 @@ main {
   width:fit-content;
   padding: 20px;
   font-size: 1.5em;
-
 }
+
+.packing-list-style {
+  border: 1px groove rgb(32, 32, 32);
+  margin: 10px 0px 20px 10px;
+  border-radius: 5px;
+  background-color: #D4F1F4;
+  width:fit-content;
+  padding: 15px;
+  font-size: 1.5em;
+}
+
+.packing-list-style button {
+  font-size: 1em
+}
+
+.individual-item {
+  margin: 5px;
+}
+
 .custom-login-signup {
   border: 1px groove rgb(32, 32, 32);
   margin: 10px;
