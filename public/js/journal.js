@@ -48,11 +48,6 @@ const addNewJournal = async (event) => {
 
 }
 
-/*const revealBtnHandler = (event) => {
-    document.getElementById('new-trip').setAttribute('class', 'new-post-form')
-    document.querySelector('.new-post-form').addEventListener('submit', addNewTrip)
-}*/
-
 document.querySelector('.add-journal').addEventListener('click', addNewJournal);
 
 document.querySelector('.my-journals').addEventListener('click', deleteJournalHandler);
