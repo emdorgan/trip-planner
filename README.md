@@ -18,7 +18,7 @@ This app is a travel planner that allows authenticated users to plan their trips
 ​
 ## Deployed Link
 ​
-* [See Live Site](https://evening-fjord-31070.herokuapp.com/)
+Note: Due to Heroku removing their free tier, this app is no longer deployed.
 ​
 ## Screenshots
 ​
